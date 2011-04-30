@@ -1,0 +1,55 @@
+\begin{thebibliography}{1}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{{\tt #1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{Ghita:2008}
+E.~Guglielmino, T.~Sireteanu, C.~W. Stammers, and M.~G. G.~Ghita.
+\newblock {\em Semi-active suspension control: improved vehicle ride and road
+  friendliness\/}.
+\newblock Springer-Verlag London Limited, 2008.
+
+\bibitem{Taghirad:1995}
+E.~Esmailzadeh and H.~Taghirad.
+\newblock \enquote{State-Feedback Control For Passenger Ride Dynamics.}
+\newblock In {\em The Canadian Society for Mechanical Engineering\/}, vol.
+  19(4), pp. 495--508. Dec. 1995.
+
+\bibitem{Thompson:1970}
+A.~Thompson.
+\newblock \enquote{Design of active suspension.}
+\newblock In {\em Proc. Instn. Mech. Engrs\/}, vol. 185, pp. 553--563. 1970.
+
+\bibitem{Sharp:1987}
+R.~Sharp and S.~Hassa.
+\newblock \enquote{On the performance capabilities of active automobile
+  suspension systems of limited bandwidth.}
+\newblock In {\em Vehicle System Dynamics\/}, vol.~16, pp. 213--225. Dec. 1987.
+
+\bibitem{Williams:1994}
+R.~A. Donahue.
+\newblock \enquote{Electronically Controlled Automotive Suspensions.}
+\newblock {\em Computing and Control Engineering\/}, vol. 5(3), pp. 143--148,
+  1994.
+
+\bibitem{Wright:1984}
+P.~G. Wright and D.~A. Williams.
+\newblock \enquote{The application of active suspension to high performance
+  road vehicles.}
+\newblock {\em Microprocessors in fluid engineering IMechE conference
+  publications\/}, 1984.
+
+\bibitem{Donahue:1998}
+M.~D. Donahue.
+\newblock \enquote{Implementation of an Active Suspension, Preview Controller
+  for Improved Ride Comfort.}
+\newblock {\em Boston University\/}, Apr. 1998.
+
+\bibitem{Crolla:1988}
+D.~A. Crolla.
+\newblock \enquote{Theoretical Comparisons of Various Active Suspension Systems
+  in terms of Performance and Power Requirements.}
+\newblock In {\em Proceedings of the Institution of Mechanical Engineers Part
+  C\/}, vol. 420, pp. 1--9. 1988.
+
+\end{thebibliography}

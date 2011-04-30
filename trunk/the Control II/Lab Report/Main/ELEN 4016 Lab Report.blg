@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: ELEN 4016 Lab Report.aux
+The style file: witseie.bst
+Database file #1: references.bib
+You've used 8 entries,
+            2282 wiz_defined-function locations,
+            566 strings with 5438 characters,
+and the built_in function-call counts, 3039 in all, are:
+= -- 220
+> -- 54
+< -- 10
++ -- 22
+- -- 14
+* -- 147
+:= -- 331
+add.period$ -- 35
+call.type$ -- 8
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 317
+empty$ -- 307
+format.name$ -- 18
+if$ -- 702
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 77
+newline$ -- 46
+num.names$ -- 8
+pop$ -- 137
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 96
+stack$ -- 0
+substring$ -- 124
+swap$ -- 210
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 18
+width$ -- 9
+write$ -- 94
