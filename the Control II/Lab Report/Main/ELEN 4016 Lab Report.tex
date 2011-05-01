@@ -18,6 +18,9 @@
 % All KJN's macros and goodies (some shameless borrowing from SPL)
 \usepackage{KJN}
 \usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amsmath}
 
 %
 % PDF Info
@@ -48,7 +51,7 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\abstract{to develop a robust controller that can improve the performances of the nonlinear active suspension system and its verifications using graphical and animation output. To develop a nonlinear mathematical model of the hydraulically actuated active suspension system for a quarter car model. To develop the control algorithm that based on a robust control scheme for the active suspension system.}
+\abstract{To develop a robust controller that can improve the performances of the nonlinear active suspension system and its verifications using graphical and animation output. A stepwise approach with successive refinements of model and controller is undertaked. To develop a nonlinear mathematical model of the active suspension system for a quarter car model. To develop the control algorithm that based on a robust control scheme for the active suspension system.}
 
 \keywords{Automated stage, LSM, microscope, X-Y linear motor}
 
@@ -97,85 +100,70 @@ The damper requires additional power and can not generate an independent force f
 
 The active suspension system which is being studied here has an active actuator between the chasis and the car body. An active actuator is a device used to convert an electrical signal to mechanical motion. The active actuation can be accomplished using a variety of components. Some examples include electromechanical actuators, hydraulic actuators, and pneumatic actuators. In the latest brake-by-wire systems, electro-machanic actuators are used \cite{Ghita:2008}. These are capable of delivering continously varying and different brake force on each wheel. Each system has its own distinct strengths such as response time and power requirements. The suspension actuators are implemented simply as controllable force inputs. The physical method of force actuation is not discussed in this paper. This will allow more flexibility once the control system has been designed for selecting the most appropriate actuator based on the need of the system, i.e. power or response time. 
 
-Active suspension can be devided into two categories: the low-bandwidth or soft active suspension and the high-bandwidth or stiff active suspension \cite{Crolla:1988}. Soft active suspensions are characterized by an actuator that is in series with a damper and the spring. Wheel hop motion is controlled passively by the damper, so that the active function of the suspension can be restricted to body motion. Therefore, such type of suspension can only improve the ride comfort. A high-bandwidth or stiff active suspension is characterized by an actuator placed in parallel with the damper and the spring as illustrated in ~\figref{fig:System}. This is the suspension system that is under investigation in this study. Since the actuator connects the unsprung mass to the body, it can control both the wheel hop motion as well as the body motion \cite{Williams:1994, Wright:1984} i.e. requirements mentioned above. Thus the active suspension can improve both the ride comfort and handling simultaneously. The additional power requirement for the actuator is one of the disadvantages of the active suspension system. 
- 
+Active suspension can be devided into two categories: the low-bandwidth or soft active suspension and the high-bandwidth or stiff active suspension \cite{Crolla:1988}. Soft active suspensions are characterized by an actuator that is in series with a damper and the spring. Wheel hop motion is controlled passively by the damper, so that the active function of the suspension can be restricted to body motion. Therefore, such type of suspension can only improve the ride comfort. A high-bandwidth or stiff active suspension is characterized by an actuator placed in parallel with the damper and the spring as illustrated in ~\figref{fig:system}. This is the suspension system that is under investigation in this study. Since the actuator connects the unsprung mass to the body, it can control both the wheel hop motion as well as the body motion \cite{Williams:1994, Wright:1984} i.e. requirements mentioned above. Thus the active suspension can improve both the ride comfort and handling simultaneously. The additional power requirement for the actuator is one of the disadvantages of the active suspension system. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{MODELLING} 
+The mathematical model of the suspension system. An initial simplifying assumption is that the suspension is linear, after a suspension model is obtained, the non-linear characteristics of the suspension system are incoperated into the model.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{System overview}
 
 The studies of active suspension system have been performed using various suspension models. The quarter car model is the model that will be investigated. Other suspension models are the half and the full car body models. These control design models are not used because the models is highly non-linear, thus the known algorithms from control design like pole placement or quadratic linear regulator require a lot of math to realise the models. The number of degrees of freedom also usually exceeds 50 resulting in large computational requirements which are out of scope for this project \cite{Sharp:1987}. In the quarter car model, only the interaction between the quarter car body and the single wheel is considered.
 
-The quarter car model is the fundamental model which can provide basic information regarding brake system behaviour which is the goal of the laboratory. Motion of the car is only in the vertical direction. ~\figref{fig:system} shows the quarter car set up with the nomenclature used.
+The quarter car model is the fundamental model which can provide basic information regarding brake system behaviour which is the goal of the laboratory. Motion of the car is only in the vertical direction. ~\figref{fig:system} shows the quarter car set up with the nomenclature used. 
+
+The objective of the model created was to assist in the development of a control system for the vehicle’s active suspension system. A high level of detail could have been included in the development of the model, however assumptions were made to simplify the model. These simplifications help remove unnecessary details that are not of interest when optimizing the vertical dynamics of the vehicle. The assumptions also help reduce the computational requirements of the simulation. The following assumptions are made with regards to the model:
+\begin{itemize}
+	\item The body of the vehicle is rigid.
+	\item The tire is modeled as a single linear spring.
+	\item The suspension damper and spring are linear.
+	\item The active actuator is linear.
+	\item The lateral and longitudinal motion of the tires is negligible compared to their vertical motion.
+	\item The vehicle is not skidding.
+\end{itemize}
+
+The last two assumptions are essential for when the system is integrated with the ABS model.
  
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=0.25\textwidth]{QuarterCarModel.jpg}
+	\caption{ Active Suspension for Quarter Car Model}
+	\label{fig:system}
+\end{figure}
 
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{MODELLING}
-A stepwise approach with successive refinements of model and controller is undertaked. This section is devoted to the mathematical modelling of vehicle, considering the passengers
-dynamics and road disturbance. A linear model is considered to represent the vehicle-passenger
-dynamics, while a normal random pro le is used to model the road roughness.
+The model consists of the sprung mass (car chassis), $\textit{m}_{s}$, and the unsprung mass (wheel assembly), $\textit{m}_{us}$, respectively, $\textit{k}_{s}$ and $\textit{k}_{t}$ are the stiffness of the car body spring and car tyre, respectively, $\textit{b}_{s}$ is the damping constant for the damper, $\textit{x}_{s}$ and $\textit{k}_{u}$ are the vertical displacement of the car body and the car wheel, respectively, $\textit{f}_{a}$ is the control force that generated by the active actuator and $\textit{r}$ is an irregular excitation from the road surface that may be considered negligible \cite{Nyandoro:2011}. 
+%%Or alternately insert a table with the values
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Underlying assumptions}
+Applying Newton's laws of motion and Hook's law on the model in ~\figref{fig:system} results in the first order differential equations equations ~\ref{eqn:xs} and ~\ref{eqn:xu}
 
-An initial simplifying assumption is that the suspension is linear and once the linear suspension model is obtained. Input output feedback linearisation is applied to the model to account for the nonlinear suspension effects.
+\begin{equation}
+	m_s \ddot{x_s} = -k_s(x_s - x_t) - b_s(\dot{x_s} - \dot{x_t}) - f_a
+	\label{eqn:xs}
+\end{equation}
 
-The objective of the model created was to assist in 
-the development of a control system for the vehicle’s 
-active suspension system. A high level of detail 
-could have been included in the development of the 
-model, however assumptions were made to simplify 
-the model. These simplifications help remove 
-unnecessary details that are not of interest when 
-optimizing the vertical dynamics of the vehicle. The 
-assumptions also help reduce the computational 
-requirements of the simulation. 
-The following assumptions were made to simplify the 
-model: 
- The body of the vehicle is rigid. 
- The lateral and longitudinal motion of the 
-tires is negligible compared to their 
-vertical motion. 
- The vehicle is a neutral steer car[1,2] 
- The vehicle is not skidding 
-Because lateral and longitudinal dynamics have been 
-removed from the model, it was important to 
-approximate their effects on the vertical behavior of 
-the model during braking/cornering. The 
-approximated braking/cornering forces are applied to 
-the CG of the vehicle, as discussed in more detail in 
-the Simulation section of the paper (Section 4.3-4.4). 
-
-
-The following assumptions about linearity were made 
-in our model: 
- Each tire is modeled as a single linear spring 
- Each of the suspension springs are linear 
- Every linear spring element (tire and 
-suspension) has an equilibrium displacement 
-calculated by the static vehicle model sitting 
-in a gravity acceleration field 
- Each of the suspension dampers are linear 
- Each of the active suspension force actuators 
-are linea
+\begin{equation}
+	m_t \ddot{x_t} = k_s(x_s - x_t) - b_s(\dot{x_s} - \dot{x_t}) + f_a
+	\label{eqn:xu}
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Mathematical model}
+\subsection{State space model}
 
-The modeled components are in reality nonlinear; 
-however a standard linearization process can be 
-executed for each component. Fig. 4 shows a 
-hypothetical tire deflection curve in red. A tire is 
-unable to “pull” (provide negative force) since it is 
-not attached to the ground. In addition, the positive 
-force that it supplies is nonlinear. To linearize this 
-tire, the equilibrium point on the actual curve must be 
-located. For small deviations from the equilibrium 
-point, the constitutive behavior of the spring may be considered linear as shown in blue. The linear tire is 
-a particularly complicated component due to its 
-inability to prevent the application of negative force. 
-This must be dealt with by adding logic into the 
-simulation code, or by scaling the inputs to prevent 
-tire lift-off.
+The linearity of this model permits the use of a statespace representation of the syste. By manipulating equations ~\ref{eqn:xs} and ~\ref{eqn:xu} the mathematical model of the active suspension system can be written in
+state space form as:
+
+\begin{array}{lcr}
+	\mathbf{\mathit{\dot{x}}} & = & \mathbf{\mathit{Ax + Bu}} \\
+	\mathbf{\mathit{y}} & = & \mathbf{\mathit{{Cx + Du}}
+	\label{eqn:stateSpace}
+\end{array}
+
+where 
+
+\begin{bmatrix}
+		11 & 12 & 13 & 14 \\
+\end{bmatrix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{STATE SPACE REPRESENTATION}
 
@@ -198,10 +186,7 @@ first-order explicit differential equations of the form
 Controllability was observed by determining the rank 
 of the controllability matrix 
 ܣܤ  ܣܤ  ܤሾ
-ଶ
-ܣܤ … … … …
-௡ିଵ
-ሿ 
+
 where B and A are the state space matrices as shown 
 in Appendix C and n is the number of states; 17 for 
 this model. It was observed that there are 9 
@@ -213,14 +198,10 @@ so, it was discovered that all states of the system were
 controllable by the four force actuator inputs. This 
 discrepancy between the Matlab result and the 
 intuitive result are discussed below. 
+
 Similarly, the Observability matrix 
 ܣܥ  ܣܥ  ܥሾ
-ଶ
-ܣܥ … … … …
-௡ିଵ
-ሿ
-்
- 
+
 was analyzed in Matlab using the C and A state space 
 matrices (shown in Appendix C) and it was found 
 that 8 states were unobservable. Observability was 

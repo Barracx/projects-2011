@@ -3,10 +3,9 @@
 \BOOKMARK [2][-]{subsection.2.1}{Passive suspension system}{section.2}
 \BOOKMARK [2][-]{subsection.2.2}{Semi-active suspension system}{section.2}
 \BOOKMARK [2][-]{subsection.2.3}{Active suspension system}{section.2}
-\BOOKMARK [2][-]{subsection.2.4}{System overview}{section.2}
 \BOOKMARK [1][-]{section.3}{MODELLING}{}
-\BOOKMARK [2][-]{subsection.3.1}{Underlying assumptions}{section.3}
-\BOOKMARK [2][-]{subsection.3.2}{Mathematical model}{section.3}
+\BOOKMARK [2][-]{subsection.3.1}{System overview}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{State space model}{section.3}
 \BOOKMARK [1][-]{section.4}{STATE SPACE REPRESENTATION}{}
 \BOOKMARK [2][-]{subsection.4.1}{Active suspension with suspension travel as the reference input}{section.4}
 \BOOKMARK [2][-]{subsection.4.2}{Active suspension with suspension dynamic force as the reference input}{section.4}
