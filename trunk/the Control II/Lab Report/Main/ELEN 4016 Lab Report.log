@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.28)  30 APR 2011 20:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.28)  30 APR 2011 23:17
 entering extended mode
  %&-line parsing enabled.
 **\nonstopmode \input{"/media/D014B3BE14B3A63E/Users/theShunainai/Documents/pro
-jects-2011/Control II/Lab Report/Main/ELEN 4016 Lab Report.tex"}
+jects-2011/the Control II/Lab Report/Main/ELEN 4016 Lab Report.tex"}
 
-(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/Control II/
-Lab Report/Main/ELEN 4016 Lab Report.tex
-(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/Control II/
-Lab Report/Main/witseiepaper.cls
+(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Control
+ II/Lab Report/Main/ELEN 4016 Lab Report.tex
+(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Control
+ II/Lab Report/Main/witseiepaper.cls
 Document Style `witseiepaper.cls' <2005/10/12>
 Rev. 1.1.0
 (/usr/share/texmf-texlive/tex/latex/tools/rawfonts.sty
@@ -57,8 +57,8 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 \c@figure=\count84
 \c@table=\count85
 )
-(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/Control II/
-Lab Report/Main/KJN.sty
+(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Control
+ II/Lab Report/Main/KJN.sty
 Package: KJN 2005/10/12 Additional packages, commands, etc for KJN
 
 Document Style `KJN.sty' <2005/10/12>
@@ -244,36 +244,71 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box26
 \rot@mess@toks=\toks16
 )
-(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/Control II/
-Lab Report/Main/ELEN 4016 Lab Report.aux)
+(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen109
+\captionmargin@=\dimen110
+\captionwidth=\dimen111
+\caption@indent=\dimen112
+\caption@parindent=\dimen113
+\caption@hangindent=\dimen114
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used on input line 1068.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2#3-> \ifx \figurestring #
+3 \vskip 5pt \setbox \@tempboxa \hbox {#1~:~#2} \ifdim \wd \@tempboxa >\hsize \
+setbox \@tempboxa \hbox {#1~:~} \setlength \captionindent {\wd \@tempboxa } \di
+vide \captionindent by 1 \parbox [t]{\hsize }{\hangindent \captionindent \hanga
+fter =1\unhbox \@tempboxa #2} \else \hbox to\hsize {\hfil \box \@tempboxa \hfil
+ } \fi \else \vskip 5pt \setbox \@tempboxa \hbox {#1~:~#2} \ifdim \wd \@tempbox
+a >\hsize \setbox \@tempboxa \hbox {#1~:~} \setlength \captionindent {\wd \@tem
+pboxa } \divide \captionindent by 1 \parbox [t]{\hsize }{\hangindent \captionin
+dent \hangafter =1\unhbox \@tempboxa #2} \else \hbox to\hsize {\hfil \box \@tem
+pboxa \hfil } \fi \vskip 8pt \fi .
+\c@ContinuedFloat=\count97
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+)
+(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Control
+ II/Lab Report/Main/ELEN 4016 Lab Report.aux)
 \openout1 = `"ELEN 4016 Lab Report.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count97
-\scratchdimen=\dimen109
+\scratchcounter=\count98
+\scratchdimen=\dimen115
 \scratchbox=\box27
-\nofMPsegments=\count98
-\nofMParguments=\count99
+\nofMPsegments=\count99
+\nofMParguments=\count100
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count100
-\MPscratchDim=\dimen110
-\MPnumerator=\count101
+\MPscratchCnt=\count101
+\MPscratchDim=\dimen116
+\MPnumerator=\count102
 \everyMPtoPDFconversion=\toks18
 ) (/usr/share/texmf-texlive/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
@@ -283,7 +318,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 39.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -291,25 +326,53 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count102
+\c@section@level=\count103
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
 
-(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/Control II/
-Lab Report/Main/ELEN 4016 Lab Report.out)
-(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/Control II/
-Lab Report/Main/ELEN 4016 Lab Report.out)
+(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Control
+ II/Lab Report/Main/ELEN 4016 Lab Report.out)
+(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Control
+ II/Lab Report/Main/ELEN 4016 Lab Report.out)
 \@outlinefile=\write3
 \openout3 = `"ELEN 4016 Lab Report.out"'.
 
 \AtBeginShipoutBox=\box28
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 57.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 59.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
+
+Package natbib Warning: Citation `Ghita:2008' on page 1 undefined on input line
+ 66.
+
+
+Package natbib Warning: Citation `Taghirad:1995' on page 1 undefined on input l
+ine 70.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package natbib Warning: Citation `Ghita:2008' on page 1 undefined on input line
+ 79.
+
+
+Package natbib Warning: Citation `Thompson:1970' on page 1 undefined on input l
+ine 81.
+
+
+Package natbib Warning: Citation `Sharp:1987' on page 1 undefined on input line
+ 81.
+
+
+Package natbib Warning: Citation `Williams:1994' on page 1 undefined on input l
+ine 86.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -319,51 +382,106 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 
-LaTeX Warning: Reference `fig:System' on page 2 undefined on input line 100.
+Package natbib Warning: Citation `Wright:1984' on page 2 undefined on input lin
+e 88.
+
+
+Package natbib Warning: Citation `Donahue:1998' on page 2 undefined on input li
+ne 93.
+
+
+Package natbib Warning: Citation `Ghita:2008' on page 2 undefined on input line
+ 100.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package natbib Warning: Citation `Crolla:1988' on page 2 undefined on input lin
+e 102.
+
+
+LaTeX Warning: Reference `fig:system' on page 2 undefined on input line 102.
+
+
+Package natbib Warning: Citation `Williams:1994' on page 2 undefined on input l
+ine 102.
+
+
+Package natbib Warning: Citation `Wright:1984' on page 2 undefined on input lin
+e 102.
+
+
+Package natbib Warning: Citation `Sharp:1987' on page 2 undefined on input line
+ 111.
+
+
+LaTeX Warning: Reference `fig:system' on page 2 undefined on input line 113.
 
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no Ç in font cmr10!
-Missing character: There is no ∑ in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 117.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 117.
+
+<QuarterCarModel.jpg, id=25, 266.9975pt x 295.1025pt>
+File: QuarterCarModel.jpg Graphic file (type jpg)
+
+<use QuarterCarModel.jpg>
+
+Package natbib Warning: Citation `Nyandoro:2011' on page 3 undefined on input l
+ine 134.
+
+
+LaTeX Warning: Reference `fig:system' on page 3 undefined on input line 137.
+
+
+LaTeX Warning: Reference `eqn:xs' on page 3 undefined on input line 137.
+
+
+LaTeX Warning: Reference `eqn:xu' on page 3 undefined on input line 137.
+
+
+LaTeX Warning: Reference `eqn:xs' on page 3 undefined on input line 152.
+
+
+LaTeX Warning: Reference `eqn:xu' on page 3 undefined on input line 152.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.155 \begin{array}{lcr}
+                        
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.159 \end{array}
+                 
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.159 \end{array}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no † in font cmr10!
 Missing character: There is no ‹ in font cmr10!
@@ -492,45 +610,57 @@ Missing character: There is no ø in font cmr10!
 Missing character: There is no ‡ in font cmr10!
 Missing character: There is no Ø in font cmr10!
 Missing character: There is no ç in font cmr10!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/Control II/
-Lab Report/Main/ELEN 4016 Lab Report.bbl
+(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Control
+ II/Lab Report/Main/ELEN 4016 Lab Report.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3])
-[4
+ [3 </media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Con
+trol II/Lab Report/Main/QuarterCarModel.jpg>]) [4
 
 ]
-(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/Control II/
-Lab Report/Main/ELEN 4016 Lab Report.aux)
+
+Package natbib Warning: There were undefined citations.
+
+
+(/media/D014B3BE14B3A63E/Users/theShunainai/Documents/projects-2011/the Control
+ II/Lab Report/Main/ELEN 4016 Lab Report.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 4998 strings out of 495061
- 72787 string characters out of 1182621
- 151387 words of memory out of 3000000
- 8039 multiletter control sequences out of 15000+50000
- 26600 words of font info for 82 fonts, out of 3000000 for 9000
+ 5912 strings out of 495061
+ 89287 string characters out of 1182621
+ 175899 words of memory out of 3000000
+ 8937 multiletter control sequences out of 15000+50000
+ 30111 words of font info for 94 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 46i,5n,38p,1275b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,9n,38p,1278b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
-sl10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsl8.pfb></u
-sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/te
-xmf-texlive/fonts/type1/urw/times/utmb8a.pfb>
-Output written on "ELEN 4016 Lab Report.pdf" (4 pages, 136511 bytes).
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmsl8.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb>
+Output written on "ELEN 4016 Lab Report.pdf" (4 pages, 177990 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

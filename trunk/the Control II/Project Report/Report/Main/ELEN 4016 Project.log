@@ -1,0 +1,590 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.1)  1 MAY 2011 01:12
+entering extended mode
+**C:/Users/theShunainai/Documents/projects-2011/the*Control*II/Project*Report/R
+eport/Main/ELEN*4016*Project.tex
+
+("C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Report/R
+eport/Main/ELEN 4016 Project.tex"
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+
+("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
+eport\Main\witseiepaper.cls"
+Document Style `witseiepaper.cls' <2005/10/12>
+Rev. 1.1.0
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\rawfonts.sty"
+Package: rawfonts 1994/05/08 Low-level LaTeX 2.09 font compatibility
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\somedefs.sty"
+Package: somedefs 1994/06/01 v0.03 Toolkit for optional definitions
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 45.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\oldlfont.sty"
+Package: oldlfont 1994/11/29 v2.2k Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\tracefnt.sty"
+Package: tracefnt 1997/05/29 v3.0j Standard LaTeX package (font tracing)
+\tracingfonts=\count79
+LaTeX Info: Redefining \selectfont on input line 101.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 71.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 72.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 79.
+LaTeX Info: Redefining \em on input line 89.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+))
+-- This is a 10 point document
+\tmpitemindent=\dimen102
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\captionindent=\skip41
+\c@figure=\count84
+\c@table=\count85
+)
+("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
+eport\Main\KJN.sty"
+Package: KJN 2005/10/12 Additional packages, commands, etc for KJN
+
+Document Style `KJN.sty' <2005/10/12>
+Rev. 1.1.0
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/01/28 v0.05d Graphics/color for pdfTeX
+\Gread@gobject=\count86
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2011/03/09 v6.82d Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2010/04/26 v1.7 LaTeX kernel commands for general use (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2010/01/28 v2.1 Provides the ifpdf switch (HO)
+
+
+! Package ifpdf Error: Name clash, \ifpdf is already defined.
+
+See the ifpdf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153     }
+           %
+Incompatible versions of \ifpdf can cause problems,
+therefore package loading is aborted.
+
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2010/03/01 v1.9 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2010/01/28 v1.3 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdfescape.sty"
+Package: pdfescape 2010/03/01 v1.9 Provides hex, PDF name and string conversion
+s (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\hycolor.sty"
+Package: hycolor 2009/12/12 v1.6 Color options of hyperref/bookmark (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\xcolor-patch.sty"
+Package: xcolor-patch 2009/12/12 xcolor patch
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\letltxmacro.sty"
+Package: letltxmacro 2008/06/24 v1.3 Let assignment for LaTeX macros (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2010/02/22 v3.7 Keyval support for LaTeX options (HO)
+)
+\@linkdim=\dimen105
+\Hy@linkcounter=\count87
+\Hy@pagecounter=\count88
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2011/03/09 v6.82d Hyperref: PDFDocEncoding definition (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\intcalc.sty"
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+\Hy@SavedSpaceFactor=\count89
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+
+Package hyperref Warning: Option `a4paper' is no longer used.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 3921.
+Package hyperref Info: Hyper figures OFF on input line 4025.
+Package hyperref Info: Link nesting OFF on input line 4030.
+Package hyperref Info: Hyper index ON on input line 4033.
+Package hyperref Info: Plain pages OFF on input line 4040.
+Package hyperref Info: Backreferencing OFF on input line 4045.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4263.
+\c@Hy@tempcnt=\count90
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4616.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\bitset.sty"
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\bigintcalc.sty"
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+))
+\Fld@menulength=\count91
+\Field@Width=\dimen106
+\Fld@charsize=\dimen107
+Package hyperref Info: Hyper figures OFF on input line 5700.
+Package hyperref Info: Link nesting OFF on input line 5705.
+Package hyperref Info: Hyper index ON on input line 5708.
+Package hyperref Info: backreferencing OFF on input line 5715.
+Package hyperref Info: Link coloring ON on input line 5718.
+Package hyperref Info: Link coloring with OCG OFF on input line 5725.
+Package hyperref Info: PDF/A mode OFF on input line 5730.
+LaTeX Info: Redefining \ref on input line 5770.
+LaTeX Info: Redefining \pageref on input line 5774.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2010/03/25 v1.12 At begin shipout hook (HO)
+)
+\Hy@abspage=\count92
+\c@Item=\count93
+\c@Hfootnote=\count94
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2011/03/09 v6.82d Hyperref driver for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\atveryend.sty"
+Package: atveryend 2010/03/24 v1.5 Hooks at very end of document (HO)
+Package atveryend Info: \enddocument detected (standard).
+)
+\Fld@listcount=\count95
+\c@bookmark@seq@number=\count96
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2010/03/16 v1.6 Rerun checks for auxiliary files (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\uniquecounter.sty"
+Package: uniquecounter 2009/12/18 v1.1 Provides unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+71.
+)
+\Hy@SectionHShift=\skip42
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
+)
+(C:\Users\theShunainai\AppData\Roaming\MiKTeX\2.9\tex\latex\natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count97
+)
+(C:\Users\theShunainai\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\balance.st
+y
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen108
+)
+\c@thrm=\count98
+)
+(C:\Users\theShunainai\AppData\Roaming\MiKTeX\2.9\tex\latex\rotating\rotating.s
+ty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count99
+\rotFPtop=\skip45
+\rotFPbot=\skip46
+\rot@float@box=\box26
+\rot@mess@toks=\toks15
+)
+("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
+eport\Main\ELEN 4016 Project.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+
+(C:\Users\theShunainai\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mki
+i
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count100
+\scratchdimen=\dimen109
+\scratchbox=\box27
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen110
+\MPnumerator=\count104
+\everyMPtoPDFconversion=\toks17
+)
+\AtBeginShipoutBox=\box28
+
+
+Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
+(hyperref)                using 11in.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 37.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty"
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
+)
+\c@section@level=\count105
+)
+LaTeX Info: Redefining \ref on input line 37.
+LaTeX Info: Redefining \pageref on input line 37.
+LaTeX Info: Redefining \nameref on input line 37.
+
+("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
+eport\Main\ELEN 4016 Project.out")
+("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
+eport\Main\ELEN 4016 Project.out")
+\@outlinefile=\write3
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 67.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+Missing character: There is no â in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+Missing character: There is no ž in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package natbib Warning: Citation `phppo' on page 1 undefined on input line 115.
+
+
+
+Package natbib Warning: Citation `biotec' on page 1 undefined on input line 115
+.
+
+
+Package natbib Warning: Citation `STimes' on page 1 undefined on input line 115
+.
+
+
+Package natbib Warning: Citation `biotec' on page 1 undefined on input line 123
+.
+
+
+Package natbib Warning: Citation `STimes' on page 1 undefined on input line 126
+.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{C:/Users/theShunainai/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+
+Package natbib Warning: Citation `Olympus' on page 2 undefined on input line 14
+9.
+
+
+Package natbib Warning: Citation `Prior' on page 2 undefined on input line 149.
+
+
+
+Package natbib Warning: Citation `Ms4' on page 2 undefined on input line 150.
+
+
+Package natbib Warning: Citation `PI' on page 2 undefined on input line 153.
+
+
+Package natbib Warning: Citation `Elmulab' on page 2 undefined on input line 16
+2.
+
+
+Package natbib Warning: Citation `Prior' on page 2 undefined on input line 163.
+
+
+
+Package natbib Warning: Citation `Olympus' on page 2 undefined on input line 16
+9.
+
+
+Package natbib Warning: Citation `Olympus' on page 2 undefined on input line 17
+2.
+
+
+Package natbib Warning: Citation `Halbach-1' on page 2 undefined on input line 
+177.
+
+
+Package natbib Warning: Citation `XY-Thrust' on page 2 undefined on input line 
+177.
+
+<../../Drawings/Flow-Diagram.pdf, id=102, 438.63875pt x 80.3pt>
+File: ../../Drawings/Flow-Diagram.pdf Graphic file (type pdf)
+
+<use ../../Drawings/Flow-Diagram.pdf>
+
+Package natbib Warning: Citation `Microchip' on page 2 undefined on input line 
+197.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package natbib Warning: Citation `Simon' on page 2 undefined on input line 218.
+
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 217--220
+[]\OT1/cmr/m/n/10 The ar-ma-ture wind-ings were based on two flat,
+ []
+
+<../../Drawings/Stage-Final.pdf, id=104, 612.2875pt x 299.1175pt>
+File: ../../Drawings/Stage-Final.pdf Graphic file (type pdf)
+
+<use ../../Drawings/Stage-Final.pdf>
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 226--227
+ [][] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 234.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 234.
+[2 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Report
+/Drawings/Flow-Diagram.pdf> <C:/Users/theShunainai/Documents/projects-2011/the 
+Control II/Project Report/Drawings/Stage-Final.pdf>]
+
+Package natbib Warning: Citation `Simon' on page 3 undefined on input line 267.
+
+
+
+Package natbib Warning: Citation `Tubular' on page 3 undefined on input line 27
+6.
+
+
+Package natbib Warning: Citation `XY-Thrust' on page 3 undefined on input line 
+276.
+
+
+Package natbib Warning: Citation `Linsync' on page 3 undefined on input line 28
+3.
+
+
+Package natbib Warning: Citation `Linsync' on page 3 undefined on input line 28
+8.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package natbib Warning: Citation `Tubular' on page 3 undefined on input line 30
+5.
+
+
+Overfull \hbox (0.54898pt too wide) in paragraph at lines 331--348
+ [][] 
+ []
+
+<../../Drawings/PM-Both.pdf, id=133, 854.19125pt x 370.38374pt>
+File: ../../Drawings/PM-Both.pdf Graphic file (type pdf)
+
+<use ../../Drawings/PM-Both.pdf> [3]
+<../../Drawings/Controller.pdf, id=146, 296.10625pt x 285.065pt>
+File: ../../Drawings/Controller.pdf Graphic file (type pdf)
+
+<use ../../Drawings/Controller.pdf>
+Underfull \hbox (badness 1097) in paragraph at lines 388--403
+ []\OT1/cmr/m/sl/10 Sinusoidal power sig-nals: \OT1/cmr/m/n/10 The two 12-bit d
+ig-i-tal
+ []
+
+
+Underfull \vbox (badness 1400) has occurred while \output is active []
+
+ [4 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Repor
+t/Drawings/PM-Both.pdf> <C:/Users/theShunainai/Documents/projects-2011/the Cont
+rol II/Project Report/Drawings/Controller.pdf>]
+<../../Drawings/Filter.pdf, id=185, 722.7pt x 285.065pt>
+File: ../../Drawings/Filter.pdf Graphic file (type pdf)
+
+<use ../../Drawings/Filter.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Repor
+t/Drawings/Filter.pdf>] <../../Drawings/Future-Stage.pdf, id=201, 455.7025pt x 
+256.96pt>
+File: ../../Drawings/Future-Stage.pdf Graphic file (type pdf)
+
+<use ../../Drawings/Future-Stage.pdf>
+
+Package natbib Warning: Citation `Halbach-1' on page 6 undefined on input line 
+552.
+
+
+Package natbib Warning: Citation `XY-Thrust' on page 6 undefined on input line 
+552.
+
+No file ELEN*4016*Project.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 590.
+[6 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Report
+/Drawings/Future-Stage.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 590.
+
+("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
+eport\Main\ELEN 4016 Project.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 590.
+Package rerunfilecheck Info: File `ELEN*4016*Project.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+ )
+(\end occurred when \ifx on line 540 was incomplete)
+(\end occurred when \ifx on line 428 was incomplete)
+(\end occurred when \ifx on line 382 was incomplete)
+(\end occurred when \ifx on line 352 was incomplete)
+(\end occurred when \ifx on line 330 was incomplete)
+(\end occurred when \ifx on line 233 was incomplete)
+(\end occurred when \ifx on line 227 was incomplete)
+(\end occurred when \ifx on line 191 was incomplete) 
+Here is how much of TeX's memory you used:
+ 5664 strings out of 494053
+ 84910 string characters out of 3146165
+ 173252 words of memory out of 3000000
+ 8768 multiletter control sequences out of 15000+200000
+ 30111 words of font info for 94 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 38i,10n,30p,740b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiK
+TeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
+>
+Output written on "ELEN 4016 Project.pdf" (6 pages, 259270 bytes).
+PDF statistics:
+ 263 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+
