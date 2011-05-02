@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.1)  1 MAY 2011 01:12
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.1)  1 MAY 2011 21:31
 entering extended mode
 **C:/Users/theShunainai/Documents/projects-2011/the*Control*II/Project*Report/R
 eport/Main/ELEN*4016*Project.tex
@@ -347,40 +347,31 @@ eport\Main\ELEN 4016 Project.out")
 ("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
 eport\Main\ELEN 4016 Project.out")
 \@outlinefile=\write3
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 67.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 57.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ž in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
+
+Package natbib Warning: Citation `Alleyne:1997' on page 1 undefined on input li
+ne 68.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-Package natbib Warning: Citation `phppo' on page 1 undefined on input line 115.
-
-
-
-Package natbib Warning: Citation `biotec' on page 1 undefined on input line 115
+Package natbib Warning: Citation `Olympus' on page 1 undefined on input line 98
 .
 
 
-Package natbib Warning: Citation `STimes' on page 1 undefined on input line 115
-.
+Package natbib Warning: Citation `Prior' on page 1 undefined on input line 98.
 
 
-Package natbib Warning: Citation `biotec' on page 1 undefined on input line 123
-.
+Package natbib Warning: Citation `Ms4' on page 1 undefined on input line 99.
 
 
-Package natbib Warning: Citation `STimes' on page 1 undefined on input line 126
-.
+Package natbib Warning: Citation `PI' on page 1 undefined on input line 102.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -390,42 +381,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 
-Package natbib Warning: Citation `Olympus' on page 2 undefined on input line 14
-9.
+Package natbib Warning: Citation `Elmulab' on page 2 undefined on input line 11
+1.
 
 
-Package natbib Warning: Citation `Prior' on page 2 undefined on input line 149.
-
-
-
-Package natbib Warning: Citation `Ms4' on page 2 undefined on input line 150.
-
-
-Package natbib Warning: Citation `PI' on page 2 undefined on input line 153.
-
-
-Package natbib Warning: Citation `Elmulab' on page 2 undefined on input line 16
-2.
-
-
-Package natbib Warning: Citation `Prior' on page 2 undefined on input line 163.
+Package natbib Warning: Citation `Prior' on page 2 undefined on input line 112.
 
 
 
-Package natbib Warning: Citation `Olympus' on page 2 undefined on input line 16
-9.
+Package natbib Warning: Citation `Olympus' on page 2 undefined on input line 11
+8.
 
 
-Package natbib Warning: Citation `Olympus' on page 2 undefined on input line 17
-2.
+Package natbib Warning: Citation `Olympus' on page 2 undefined on input line 12
+1.
 
 
 Package natbib Warning: Citation `Halbach-1' on page 2 undefined on input line 
-177.
+126.
 
 
 Package natbib Warning: Citation `XY-Thrust' on page 2 undefined on input line 
-177.
+126.
 
 <../../Drawings/Flow-Diagram.pdf, id=102, 438.63875pt x 80.3pt>
 File: ../../Drawings/Flow-Diagram.pdf Graphic file (type pdf)
@@ -433,18 +410,18 @@ File: ../../Drawings/Flow-Diagram.pdf Graphic file (type pdf)
 <use ../../Drawings/Flow-Diagram.pdf>
 
 Package natbib Warning: Citation `Microchip' on page 2 undefined on input line 
-197.
+146.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-Package natbib Warning: Citation `Simon' on page 2 undefined on input line 218.
+Package natbib Warning: Citation `Simon' on page 2 undefined on input line 167.
 
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 217--220
+Underfull \hbox (badness 1199) in paragraph at lines 166--169
 []\OT1/cmr/m/n/10 The ar-ma-ture wind-ings were based on two flat,
  []
 
@@ -452,123 +429,146 @@ Underfull \hbox (badness 1199) in paragraph at lines 217--220
 File: ../../Drawings/Stage-Final.pdf Graphic file (type pdf)
 
 <use ../../Drawings/Stage-Final.pdf>
-Overfull \hbox (8.53583pt too wide) in paragraph at lines 226--227
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 175--176
  [][] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 234.
+(Font)              <7> on input line 183.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 234.
-[2 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Report
-/Drawings/Flow-Diagram.pdf> <C:/Users/theShunainai/Documents/projects-2011/the 
-Control II/Project Report/Drawings/Stage-Final.pdf>]
+(Font)              <5> on input line 183.
 
-Package natbib Warning: Citation `Simon' on page 3 undefined on input line 267.
+Package natbib Warning: Citation `Simon' on page 2 undefined on input line 216.
 
 
 
-Package natbib Warning: Citation `Tubular' on page 3 undefined on input line 27
-6.
+Underfull \vbox (badness 4569) has occurred while \output is active []
+
+ [2 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Repor
+t/Drawings/Flow-Diagram.pdf> <C:/Users/theShunainai/Documents/projects-2011/the
+ Control II/Project Report/Drawings/Stage-Final.pdf>]
+
+Package natbib Warning: Citation `Tubular' on page 3 undefined on input line 22
+5.
 
 
 Package natbib Warning: Citation `XY-Thrust' on page 3 undefined on input line 
-276.
+225.
 
 
-Package natbib Warning: Citation `Linsync' on page 3 undefined on input line 28
-3.
+Package natbib Warning: Citation `Linsync' on page 3 undefined on input line 23
+2.
 
 
-Package natbib Warning: Citation `Linsync' on page 3 undefined on input line 28
-8.
+Package natbib Warning: Citation `Linsync' on page 3 undefined on input line 23
+7.
+
+
+Package natbib Warning: Citation `Tubular' on page 3 undefined on input line 25
+4.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-
-Package natbib Warning: Citation `Tubular' on page 3 undefined on input line 30
-5.
-
-
-Overfull \hbox (0.54898pt too wide) in paragraph at lines 331--348
+Overfull \hbox (0.54898pt too wide) in paragraph at lines 280--297
  [][] 
  []
 
-<../../Drawings/PM-Both.pdf, id=133, 854.19125pt x 370.38374pt>
+<../../Drawings/PM-Both.pdf, id=132, 854.19125pt x 370.38374pt>
 File: ../../Drawings/PM-Both.pdf Graphic file (type pdf)
 
-<use ../../Drawings/PM-Both.pdf> [3]
-<../../Drawings/Controller.pdf, id=146, 296.10625pt x 285.065pt>
+<use ../../Drawings/PM-Both.pdf> [3 <C:/Users/theShunainai/Documents/projects-2
+011/the Control II/Project Report/Drawings/PM-Both.pdf>]
+<../../Drawings/Controller.pdf, id=162, 296.10625pt x 285.065pt>
 File: ../../Drawings/Controller.pdf Graphic file (type pdf)
 
 <use ../../Drawings/Controller.pdf>
-Underfull \hbox (badness 1097) in paragraph at lines 388--403
+Underfull \hbox (badness 1097) in paragraph at lines 337--352
  []\OT1/cmr/m/sl/10 Sinusoidal power sig-nals: \OT1/cmr/m/n/10 The two 12-bit d
 ig-i-tal
  []
 
-
-Underfull \vbox (badness 1400) has occurred while \output is active []
-
- [4 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Repor
-t/Drawings/PM-Both.pdf> <C:/Users/theShunainai/Documents/projects-2011/the Cont
-rol II/Project Report/Drawings/Controller.pdf>]
-<../../Drawings/Filter.pdf, id=185, 722.7pt x 285.065pt>
+<../../Drawings/Filter.pdf, id=165, 722.7pt x 285.065pt>
 File: ../../Drawings/Filter.pdf Graphic file (type pdf)
 
 <use ../../Drawings/Filter.pdf>
+Underfull \vbox (badness 1132) has occurred while \output is active []
+
+ [4 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Repor
+t/Drawings/Controller.pdf> <C:/Users/theShunainai/Documents/projects-2011/the C
+ontrol II/Project Report/Drawings/Filter.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Repor
-t/Drawings/Filter.pdf>] <../../Drawings/Future-Stage.pdf, id=201, 455.7025pt x 
-256.96pt>
+<../../Drawings/Future-Stage.pdf, id=191, 455.7025pt x 256.96pt>
 File: ../../Drawings/Future-Stage.pdf Graphic file (type pdf)
 
 <use ../../Drawings/Future-Stage.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
 
 Package natbib Warning: Citation `Halbach-1' on page 6 undefined on input line 
-552.
+501.
 
 
 Package natbib Warning: Citation `XY-Thrust' on page 6 undefined on input line 
-552.
+501.
 
-No file ELEN*4016*Project.bbl.
+
+("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
+eport\Main\ELEN 4016 Project.bbl"
+Underfull \hbox (badness 4492) in paragraph at lines 26--29
+[]\OT1/cmr/m/it/10 Olympus Cor-po-ra-tion\OT1/cmr/m/n/10 .  URL [][]$\OT1/cmtt/
+m/n/10 http : / / www .
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 52--57
+[]\OT1/cmr/m/n/10 H. Ohsaki, H. Xueliang, Y. Tsuboi, and
+ []
+
+)
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 590.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 539.
 [6 <C:/Users/theShunainai/Documents/projects-2011/the Control II/Project Report
 /Drawings/Future-Stage.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 590.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 539.
 
 ("C:\Users\theShunainai\Documents\projects-2011\the Control II\Project Report\R
-eport\Main\ELEN 4016 Project.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 590.
+eport\Main\ELEN 4016 Project.aux"
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 539.
 Package rerunfilecheck Info: File `ELEN*4016*Project.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  )
-(\end occurred when \ifx on line 540 was incomplete)
-(\end occurred when \ifx on line 428 was incomplete)
-(\end occurred when \ifx on line 382 was incomplete)
-(\end occurred when \ifx on line 352 was incomplete)
-(\end occurred when \ifx on line 330 was incomplete)
-(\end occurred when \ifx on line 233 was incomplete)
-(\end occurred when \ifx on line 227 was incomplete)
-(\end occurred when \ifx on line 191 was incomplete) 
+(\end occurred when \ifx on line 489 was incomplete)
+(\end occurred when \ifx on line 377 was incomplete)
+(\end occurred when \ifx on line 331 was incomplete)
+(\end occurred when \ifx on line 301 was incomplete)
+(\end occurred when \ifx on line 279 was incomplete)
+(\end occurred when \ifx on line 182 was incomplete)
+(\end occurred when \ifx on line 176 was incomplete)
+(\end occurred when \ifx on line 140 was incomplete) 
 Here is how much of TeX's memory you used:
- 5664 strings out of 494053
- 84910 string characters out of 3146165
+ 5712 strings out of 494053
+ 85808 string characters out of 3146165
  173252 words of memory out of 3000000
- 8768 multiletter control sequences out of 15000+200000
+ 8799 multiletter control sequences out of 15000+200000
  30111 words of font info for 94 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 38i,10n,30p,740b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,30p,1532b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiK
 TeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
@@ -576,15 +576,16 @@ type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
+/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmsl8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
 >
-Output written on "ELEN 4016 Project.pdf" (6 pages, 259270 bytes).
+Output written on "ELEN 4016 Project.pdf" (6 pages, 284528 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
