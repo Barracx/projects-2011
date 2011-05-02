@@ -1,0 +1,210 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mwsh="http://www.mathworks.com/namespace/mcode/v1/syntaxhighlight.dtd">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+      <!--
+This HTML is auto-generated from an M-file.
+To make changes, update the M-file and republish this document.
+      -->
+      <title>ch12p1</title>
+      <meta name="generator" content="MATLAB 7.6">
+      <meta name="date" content="2011-05-01">
+      <meta name="m-file" content="ch12p1"><style>
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head>
+   <body>
+      <div class="content"><pre class="codeinput"><span class="string">'ch12p1 Example 12.1'</span>                   <span class="comment">%Display label</span>
+clf                                     <span class="comment">%Clear the graph on the screen</span>
+ks = 490;        <span class="comment">%Spring constant</span>
+Bs = 700;        <span class="comment">%Damper constant</span>
+ms = 490;        <span class="comment">%Mass of 1/4 car</span>
+mu = 40;         <span class="comment">%Mass of wheel</span>
+kw = 190;        <span class="comment">%Tire spring constant</span>
+Tmax = 10000;    <span class="comment">%Actuator force</span>
+A = [0 1 0 0;
+    -ks/ms -Bs/ms ks/ms Bs/ms;
+    0 0 0 1;
+    ks/mu Bs/mu -(ks-kw)/mu -Bs/mu];
+B = [0; Tmax/ms; 0; -Tmax/mu];
+C = [0 1 -1 0];
+D = 0;
+
+pos = input(<span class="string">'Type in desired %OS: '</span>);   <span class="comment">%Input desired percent overshoot</span>
+Ts  = input(<span class="string">'Type in the desired Ts: '</span>);<span class="comment">%Input desired settling time</span>
+
+z = (-log (pos/100)/sqrt(pi^2 + log(pos/100)^2));
+                                        <span class="comment">%Calculate the required damping</span>
+                                        <span class="comment">%ratio</span>
+wn = 4/(z*Ts);                          <span class="comment">%Calculate the required natural</span>
+                                        <span class="comment">%frequency</span>
+[num, den] = ord2(wn,z);                <span class="comment">%Produce a 2nd order system that</span>
+                                        <span class="comment">%meets the required transient</span>
+                                        <span class="comment">%response requirements</span>
+r = roots(den);                         <span class="comment">%Use the denominator to specify</span>
+                                        <span class="comment">%the dominant poles</span>
+<span class="comment">%poles = [r(1) r(2) -50];               %Specify the pole placement for all poles</span>
+p1 = -20+20i;
+p2 = -20-20i;
+p3 = -100;
+p4 = -68;
+
+poles = [p1 p2 p3 p4];                 <span class="comment">%Desired poles</span>
+
+K = acker(A, B, poles)               <span class="comment">%Phase variable form</span>
+
+Anew = A - B * K;                   <span class="comment">%Form compensated A matrix</span>
+Bnew = B;                             <span class="comment">%Form compensated B matrix</span>
+Cnew = C;                             <span class="comment">%Form compensated C matrix</span>
+Dnew = D;                             <span class="comment">%Form compensated D matrix</span>
+
+                                        <span class="comment">%For T(s) numerator and denominator</span>
+
+<span class="comment">%'Controllability test'</span>
+Cm = ctrb(Anew, Bnew)
+Rank = rank(Cm)
+
+<span class="string">'T1(s) and Ts2'</span>                                  <span class="comment">%Display label</span>
+Tss1 = ss(A, B, C, D)
+Tss2 = ss(Anew, Bnew, Cnew, Dnew)    <span class="comment">%Create and display Tss, an LTI state-space object</span>
+T2 = tf(Tss);                        <span class="comment">%Create T(s)</span>
+T2 = minreal(T2)                      <span class="comment">%Display poles of T(s)</span>
+poles = pole(T2)
+<span class="comment">% step(Tss)                               %Produce the compensated step response</span>
+step(Tss2,<span class="string">'g--'</span>)           <span class="comment">%step(sys1,'r',sys2,'y--',sys3,'gx').</span>
+pause
+</pre><pre class="codeoutput">
+ans =
+
+ch12p1 Example 12.1
+</pre><pre class="codeoutput">Error using ==&gt; input
+Cannot call INPUT from EVALC.
+
+Error in ==&gt; ch12p1 at 17
+pos = input('Type in desired %OS: ');   %Input desired percent overshoot
+
+</pre><p class="footer"><br>
+            Published with MATLAB&reg; 7.6<br></p>
+      </div>
+      <!--
+##### SOURCE BEGIN #####
+'ch12p1 Example 12.1'                   %Display label
+clf                                     %Clear the graph on the screen
+ks = 490;        %Spring constant
+Bs = 700;        %Damper constant
+ms = 490;        %Mass of 1/4 car
+mu = 40;         %Mass of wheel
+kw = 190;        %Tire spring constant
+Tmax = 10000;    %Actuator force
+A = [0 1 0 0;
+    -ks/ms -Bs/ms ks/ms Bs/ms; 
+    0 0 0 1; 
+    ks/mu Bs/mu -(ks-kw)/mu -Bs/mu];
+B = [0; Tmax/ms; 0; -Tmax/mu];
+C = [0 1 -1 0];
+D = 0;
+
+pos = input('Type in desired %OS: ');   %Input desired percent overshoot
+Ts  = input('Type in the desired Ts: ');%Input desired settling time
+
+z = (-log (pos/100)/sqrt(pi^2 + log(pos/100)^2));
+                                        %Calculate the required damping
+                                        %ratio
+wn = 4/(z*Ts);                          %Calculate the required natural 
+                                        %frequency
+[num, den] = ord2(wn,z);                %Produce a 2nd order system that 
+                                        %meets the required transient 
+                                        %response requirements
+r = roots(den);                         %Use the denominator to specify 
+                                        %the dominant poles  
+%poles = [r(1) r(2) -50];               %Specify the pole placement for all poles
+p1 = -20+20i;
+p2 = -20-20i;
+p3 = -100;
+p4 = -68;
+
+poles = [p1 p2 p3 p4];                 %Desired poles
+
+K = acker(A, B, poles)               %Phase variable form
+
+Anew = A - B * K;                   %Form compensated A matrix
+Bnew = B;                             %Form compensated B matrix
+Cnew = C;                             %Form compensated C matrix
+Dnew = D;                             %Form compensated D matrix
+
+                                        %For T(s) numerator and denominator                                       
+                                        
+%'Controllability test'                                        
+Cm = ctrb(Anew, Bnew)
+Rank = rank(Cm)
+
+'T1(s) and Ts2'                                  %Display label
+Tss1 = ss(A, B, C, D)
+Tss2 = ss(Anew, Bnew, Cnew, Dnew)    %Create and display Tss, an LTI state-space object
+T2 = tf(Tss);                        %Create T(s)
+T2 = minreal(T2)                      %Display poles of T(s)
+poles = pole(T2)
+% step(Tss)                               %Produce the compensated step response
+step(Tss2,'gREPLACE_WITH_DASH_DASH')           %step(sys1,'r',sys2,'yREPLACE_WITH_DASH_DASH',sys3,'gx').
+pause
+                                       
+##### SOURCE END #####
+-->
+   </body>
+</html>

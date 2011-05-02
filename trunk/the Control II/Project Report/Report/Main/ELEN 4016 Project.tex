@@ -37,9 +37,9 @@
 \begin{document}
 
 
-\title{DESIGN AND CONSTRUCTION OF AN ELECTRIC MICROSCOPE STAGE USING AN X-Y LINEAR SYNCHRONOUS MOTOR}
+\title{MODELING AND CONTROL OF AN ANTI-LOCK BRAKING SYSTEM}
 
-\author{Danson Joseph}
+\author{Ntsako K. Manyike}
 
 \thanks{School of Electrical \& Information Engineering, University of the
 Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
@@ -48,19 +48,9 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\abstract{The design and construction of an electric microscope stage, powered
-by an X-Y linear synchronous motor (LSM) is presented.  The system is to be
-used to automate specimen photomicrography to effect rapid diagnoses of
-illnesses.  The development of both motorised stage and its drive system is
-discussed.  The drive system was tested using sinusoidal and pulse width
-modulation (PWM) power signals. Tests showed that the combination of
-wire-wound armature and PWM power signals provided the best performance.
-However, slow, smooth motion could not be achieved, especially without
-suitable closed-loop feedback.  It was concluded that the X-Y LSM layout used
-was not ideal and a more suitable layout is presented which aims to improve
-performance by using four independent linear synchronous motors.}
+\abstract{}
 
-\keywords{Automated stage, LSM, microscope, X-Y linear motor}
+\keywords{}
 
 
 \maketitle
@@ -71,61 +61,20 @@ performance by using four independent linear synchronous motors.}
 %
 \section{INTRODUCTION}
 
-The purpose of an automobile suspension is to adequately support the chasis, to maintain tire contact with the ground, and to manage the compromise between vehicle road handling and passenger comfort. Active suspension control is concerned with controlling the vertical movements of the vehicle in response to the fast changing road surface properties. This is accomplished by actively applying vertical forces in the suspension to counteract some of the effects of the road surface. This minimises the vehicle body roll and vertical accelerations experienced by motor vehicles passengers and improve overall vehicle handling. 
+The technology of vehicles, especially cars all over the world is continously evolving. Along with the many advances in the car manufacturing industry, the safety requirement for cars is of paramount importance. The techniques applied to various cars have already improved system stability and passenger safety with the use of several significant control systems, such as anti-lock braking systems (ABS), active suspension systems, traction control systems etc. 
 
-In this contribution a new approach to active sus-
-pension system has been introduced. Tubulus linear
-electrical motor has been used as an actuator. With
-this actuator several advantages can be achieved. The
-main one is that electric motor can, in generally, work
-in generator mode and thus it can produce an energy
-for future functioning. In this article the motor has
-been used in active mode only to analyze the energy
-demands on this system and to optimize this demands
-using H∞ theory.
-Using of automotive suspension, shortly speaking, has
-two main reasons – to make car more comfortable for
-passengers and to improve car handling. Ride comfort
-can be classified as: 1) body acceleration attenuation
-during driving, when a road irregularities causes on
-the car tires and 2) sprung mass vertical displacement
-peaks reduction. In addition, it seems to be better to
-take into account that human being is most sensitive
-in frequency range from 4 to 8Hz, therefore add-on re-
-quirement on ride comfort is to attenuate body acceler-
-ation on these frequencies primarily. Car handling can
-be characterized: 1) as vehicle stability and control-
-lability, thus as rolling and pitching reduction during
-braking, accelerating and driving through curves and
-2) as tire jumping, thus (in the one-quarter-car model
-case) as acceleration of unsprung masses.
-To satisfy all of these requirements, it is necessary
-to change damping characteristic dynamically with
-respect to the road situation. The actuator has to be
-added into the system, whereby the active or semiac-
-tive suspension system is obtained. For the first time
-our idea of using the tubulus linear electric motor as a
-actuator for active suspension has been realized.
+ABS is a system on motor vehicles which prevents the wheel from locking while braking. The purpose of this system is to allow the driver to maintain steering control under heavy breaking and in some situations to shorten braking distance and time. When brakes lock up on wet and slippery roads during a panic stop the driver might lose steering control and the vehicle can spin.
+
+There have been some integrated studies that combined the aforementioned subsystems in order to further enhance vehicle dynamic efficiency. For example, the concept of integrating ABS with active suspension has been introduced and investigated in the work of \cite{Alleyne:1997}. Many theories and design methods for ABS and active suspension systems have been proposed individually over the years. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{BACKGROUND}
 
-\subsection{Disease diagnosis}
+\subsection{ABS}
 
-The diagnosis of Tuberculosis and Malaria involves the examination of sputum
-and blood samples respectively \cite{phppo,biotec,STimes}.  These examinations
-also reveal the contagious quality of infections such as TB.  Therefore,
-faster diagnosis results in better containment of the disease and allows the
-patient to be treated before their condition worsens.  This is of particular
-importance when one considers the consequences associated with a delayed
-diagnosis of an AIDS patient.  AIDS disables the immune system.  A patient
-dies from a secondary infection such as Malaria or TB.  The scale of the
-problem is of significance.  Tuberculosis has been listed as a global problem
-by the World Health Organisation \cite{biotec}.  The National University
-of Singapore has used image recognition software to analyse digitised
-microscope images to diagnose Malaria with greater speed than
-before \cite{STimes}.  Besides providing a faster means of performing
-diagnoses, the project provides less qualified medical technicians with a
-means to perform the diagnoses.
+It can provide directional stability and shortens the braking distance and time. Various researchers have considered a slip-ratio control of ABS in the use of sliding mode control schemes [3, 4]. A gain-scheduling scheme was proposed for the optimal target-slip tracking of an ABS, where the friction coefficient varied with respect to different vehicle forward speeds [5, 6]. 
+
+Active suspension systems must be able to guarantee the ride comfort of passengers. Hence, in the design of active suspensions, the improvement of ride quality is a major control objective to be emphasised. In the work of Lin and coworkers [8, 9], a novel nonlinear backstepping [14, 15] control design scheme was developed for both a quarter-car and a half-car active suspension system, which aimed to improve the tradeoff between the ride quality of passenger comfort and the utilisation of suspension travel. In addition, a road-adaptive nonlinear backstepping controller [10] has been applied to the design of a quarter-car active suspension for various road surfaces. The purpose of this paper is to take advantage of ABSs combined with active suspensions to further reduce vehicle braking time and stopping distance. During the braking process, if the vertical normal force is increased (this situation is equivalent to an increase of the weight of a car), the friction force between the car and road surface is increased to help the vehicle to stop in a shorter distance. As normal force cannot be increased naturally, active suspensions should therefore be the tool employed to achieve that adjustment of normal force. With the choice of an appropriate integrated algorithm, the vertical normal force can be adjusted with the braking torque in order to achieve a reduction of braking time and stopping distance.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Microscope stages}

@@ -1,0 +1,20 @@
+%Ball example
+
+A = [ 0 1 0; 980 0 -2.8; 0 0 -100];
+B = [0; 0; 100];
+C = [1 0 0];
+D = 0;
+
+poles = eig(A);
+
+t = 0:0.01:2;
+u = 0*t;
+x0 = [0.005 0 0];
+stateSpace = ss(A, B, C, D);
+u = 1;
+
+tutorial_tf = tf(stateSpace);
+p1 = -8 + 8.39i;
+p2 = -8 - 8.39i;
+
+K = place(A, B [ 

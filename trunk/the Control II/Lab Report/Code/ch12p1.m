@@ -1,0 +1,60 @@
+'ch12p1 Example 12.1'                   %Display label
+clf                                     %Clear the graph on the screen
+ks = 490;        %Spring constant
+Bs = 700;        %Damper constant
+ms = 490;        %Mass of 1/4 car
+mu = 40;         %Mass of wheel
+kw = 190;        %Tire spring constant
+Tmax = 10000;    %Actuator force
+A = [0 1 0 0;
+    -ks/ms -Bs/ms ks/ms Bs/ms; 
+    0 0 0 1; 
+    ks/mu Bs/mu -(ks-kw)/mu -Bs/mu];
+B = [0; Tmax/ms; 0; -Tmax/mu];
+C = [0 0 1 0];
+D = 0;
+
+pos = input('Type in desired %OS: ');   %Input desired percent overshoot
+Ts  = input('Type in the desired Ts: ');%Input desired settling time
+
+z = (-log (pos/100)/sqrt(pi^2 + log(pos/100)^2));
+                                        %Calculate the required damping
+                                        %ratio
+wn = 4/(z*Ts);                          %Calculate the required natural 
+                                        %frequency
+[num, den] = ord2(wn,z);                %Produce a 2nd order system that 
+                                        %meets the required transient 
+                                        %response requirements
+r = roots(den);                         %Use the denominator to specify 
+                                        %the dominant poles  
+%poles = [r(1) r(2) -50];               %Specify the pole placement for all poles
+p1 = -20+20i;
+p2 = -20-20i;
+p3 = -100;
+p4 = -68;
+
+poles = [p1 p2 p3 p4];                 %Desired poles
+
+K = acker(A, B, poles)               %Phase variable form
+
+Anew = A - B * K;                   %Form compensated A matrix
+Bnew = B;                             %Form compensated B matrix
+Cnew = C;                             %Form compensated C matrix
+Dnew = D;                             %Form compensated D matrix
+
+                                        %For T(s) numerator and denominator                                       
+                                        
+%'Controllability test'                                        
+Cm = ctrb(Anew, Bnew)
+Rank = rank(Cm)
+
+'T1(s) and Ts2'                                  %Display label
+Tss1 = ss(A, B, C, D)
+Tss2 = ss(Anew, Bnew, Cnew, Dnew)    %Create and display Tss, an LTI state-space object
+T2 = tf(Tss);                        %Create T(s)
+T2 = minreal(T2)                      %Display poles of T(s)
+poles = pole(T2)
+% step(Tss)                               %Produce the compensated step response
+step(Tss2,'g--')           %step(sys1,'r',sys2,'y--',sys3,'gx').
+pause
+                                       
