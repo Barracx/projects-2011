@@ -1,0 +1,12 @@
+cupsPrinter 1 support [28/Apr/2011:16:31:35 +0300] 1 1DEBUG2: - localhost Test Page - -
+cupsPrinter 1 support [28/Apr/2011:16:41:37 +0300] 1 1DEBUG: - localhost Test Page - -
+cupsPrinter 1 support [28/Apr/2011:16:51:48 +0300] 1 1DEBUG2: - localhost Test Page - -
+cupsPrinter 1 support [28/Apr/2011:17:01:52 +0300] 1 1DEBUG2: - localhost Test Page - -
+cupsPrinter 1 support [28/Apr/2011:17:11:57 +0300] 1 1DEBUG2: - localhost Test Page - -
+Hewlett-Packard-HP-LaserJet-P4015 2 support [28/Apr/2011:17:28:26 +0300] 1 1 - localhost Test Page - -
+cupsPrinter 3 support [28/Apr/2011:19:59:57 +0300] 1 1DEBUG: - localhost PHP Tutorial - File Create - -
+cupsPrinter 3 support [28/Apr/2011:19:59:57 +0300] 2 1DEBUG: - localhost PHP Tutorial - File Create - -
+cupsPrinter 4 support [28/Apr/2011:20:26:32 +0300] 1 1DEBUG2: - localhost cups sample page log file - Google Search - -
+cupsPrinter 4 support [28/Apr/2011:20:26:32 +0300] 2 1DEBUG: - localhost cups sample page log file - Google Search - -
+cupsPrinter 5 support [28/Apr/2011:20:27:20 +0300] 1 1DEBUG2: - localhost PHP Tutorial - File Create - -
+cupsPrinter 5 support [28/Apr/2011:20:27:20 +0300] 2 1DEBUG: - localhost PHP Tutorial - File Create - -
