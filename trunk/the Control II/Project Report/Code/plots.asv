@@ -1,0 +1,3 @@
+%Plots
+simplot(ScopeData)
+legend('Car Velocity','Wheel angular velocity', 'Distance travelled')
