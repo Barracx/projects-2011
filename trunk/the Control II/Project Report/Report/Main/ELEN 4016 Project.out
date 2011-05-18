@@ -1,22 +1,11 @@
 \BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
 \BOOKMARK [1][-]{section.2}{BACKGROUND}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{ABS}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Microscope stages}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Digital camera systems}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Linear synchronous motors}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{SYSTEM DESIGN}{}% 7
-\BOOKMARK [2][-]{subsection.3.1}{dsPIC30F6014 microcontroller unit}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.2}{Drive system electronics}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.3}{X- and Y- direction windings}{section.3}% 10
-\BOOKMARK [1][-]{section.4}{STAGE DESIGN}{}% 11
-\BOOKMARK [2][-]{subsection.4.1}{LSM design}{section.4}% 12
-\BOOKMARK [1][-]{section.5}{DRIVER SYSTEM}{}% 13
-\BOOKMARK [2][-]{subsection.5.1}{dsPIC30F6014 microcontroller}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.2}{Drive system electronics}{section.5}% 15
-\BOOKMARK [1][-]{section.6}{RESULTS}{}% 16
-\BOOKMARK [2][-]{subsection.6.1}{Torsional effects}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.2}{Frictional effects at low speeds}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.3}{LSM construction}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.4}{Sinusoidal vs. PWM power signals}{section.6}% 20
-\BOOKMARK [1][-]{section.7}{DISCUSSION}{}% 21
-\BOOKMARK [1][-]{section.8}{CONCLUSION}{}% 22
+\BOOKMARK [1][-]{section.3}{SYSTEM MODELING}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Mathematical model}{section.3}% 4
+\BOOKMARK [1][-]{section.4}{STATE-SPACE ANALYSIS}{}% 5
+\BOOKMARK [2][-]{subsection.4.1}{State-space representation}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.2}{Input-Output feedback linearisation}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.3}{Feedback controller design}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{SIMULATIONS}{}% 9
+\BOOKMARK [1][-]{section.6}{RESULTS AND DISCUSSIONS}{}% 10
+\BOOKMARK [1][-]{section.7}{CONCLUSION}{}% 11

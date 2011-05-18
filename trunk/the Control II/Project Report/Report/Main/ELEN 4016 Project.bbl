@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
@@ -9,16 +9,72 @@ A.~Alleyne.
   braking forces.}
 \newblock In {\em Vehicle System Dynamics\/}, vol.~27, pp. 235--265. 1997.
 
-\bibitem{Olympus}
-{\em Olympus Corporation\/}.
-\newblock \urlprefix\url{http://www.olympus.com}.
-\newblock Last accessed: 1 July 2004.
+\bibitem{Nyandoro2:2011}
+O.~Nyandoro.
+\newblock \enquote{Input-Output Feedback Linearisation.}, Mar. 2011.
+\newblock A Linearising Approach for Linear in Control Class of Systems.
 
-\bibitem{Simon}
-S.~Q. Davies.
-\newblock \enquote{Design, Construction and Control of a Slot-less X-Y Linear
-  Synchronous Motor.}
-\newblock 4$^{\rm th}$ Year Project Report 03P40, School of Electrical and
-  Information Engineering, University of the Witwatersrand, South Africa, 2003.
+\bibitem{Iraj:2008}
+I.~Hassanzadeh, S.~Mobayen, and A.~Harifi.
+\newblock \enquote{Input-Output Feedback Linearization Cascade Controller Using
+  Genetic Algorithm for Rotary Inverted Pendulum System.}
+\newblock {\em American Journal of Applied Sciences\/}, vol. 5(10), pp.
+  1322--1328, 2008.
+
+\bibitem{Crolla:1988}
+D.~A. Crolla.
+\newblock \enquote{Theoretical Comparisons of Various Active Suspension Systems
+  in terms of Performance and Power Requirements.}
+\newblock In {\em Proceedings of the Institution of Mechanical Engineers Part
+  C\/}, vol. 420, pp. 1--9. 1988.
+
+\bibitem{Shaomin:2010}
+L.~Shaomin, F.~Zhen, and X.~Cangsu.
+\newblock \enquote{Integrated control of semi-active suspension and ABS based
+  on sliding mode theory.}
+\newblock In {\em 29th Chinese control conference\/}, vol.~27, pp. 3214--3219.
+  2010.
+
+\bibitem{Tiem:2008}
+N.~V. Tiem and V.~H. Hoan.
+\newblock \enquote{Synthesis of adaptive control for anti-lock braking systems
+  based on fuzzy logic and neural network control.}
+\newblock vol.~27, pp. 361--368. 2008.
+
+\bibitem{Pedro:2009}
+J.~Pedro, O.~Nyandoro, and S.~John.
+\newblock \enquote{Neural network based feedback linearisation slip control of
+  an anti-lock braking system.}
+\newblock In {\em 7th Asian control conference\/}, pp. 1251--1257. Aug. 2009.
+
+\bibitem{Nyandoro1:2011}
+O.~Nyandoro.
+\newblock \enquote{ELEN 4016 Control II project.}, Mar. 2011.
+\newblock Modelling and Control of an Antilock Braking System.
+
+\bibitem{Pable:2007}
+M.~Pable and P.~Seshu.
+\newblock \enquote{Design of Passive Suspensions to Reduce Actuator Control
+  Effort.}
+\newblock {\em 12th IFToMM World Congress\/}, vol. 5(10), pp. 1005--1010, 2007.
+
+\bibitem{Sims:1999}
+N.~D. Sims, R.~Stanway, D.~Peel, W.~Bullough, and A.~Johnson.
+\newblock \enquote{Controllable Viscous Damping: An Experimental Study of an
+  Electrorheological Long-Stroke Damper Under Proportional Feedback Control.}
+\newblock {\em Boston University\/}, Apr. 1999.
+
+\bibitem{Wright:1984}
+P.~G. Wright and D.~A. Williams.
+\newblock \enquote{The application of active suspension to high performance
+  road vehicles.}
+\newblock {\em Microprocessors in fluid engineering IMechE conference
+  publications\/}, 1984.
+
+\bibitem{Wang:2009}
+W.-Y. Wang, Y.-H. Chien, M.-C. Chen, and T.-T. Lee.
+\newblock \enquote{Control of Uncertain Active Suspension System with Antilock
+  Braking system Using Fuzzy Neural Controllers.}
+\newblock vol.~27, pp. 3371--3378. 2009.
 
 \end{thebibliography}

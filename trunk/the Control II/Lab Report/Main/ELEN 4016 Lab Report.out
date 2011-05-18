@@ -1,17 +1,13 @@
-\BOOKMARK [1][-]{section.1}{INTRODUCTION}{}
-\BOOKMARK [1][-]{section.2}{BACKGROUND}{}
-\BOOKMARK [2][-]{subsection.2.1}{Passive suspension system}{section.2}
-\BOOKMARK [2][-]{subsection.2.2}{Semi-active suspension system}{section.2}
-\BOOKMARK [2][-]{subsection.2.3}{Active suspension system}{section.2}
-\BOOKMARK [1][-]{section.3}{MODELLING}{}
-\BOOKMARK [2][-]{subsection.3.1}{System overview}{section.3}
-\BOOKMARK [2][-]{subsection.3.2}{State space model}{section.3}
-\BOOKMARK [1][-]{section.4}{STATE SPACE REPRESENTATION}{}
-\BOOKMARK [2][-]{subsection.4.1}{Active suspension with suspension travel as the reference input}{section.4}
-\BOOKMARK [2][-]{subsection.4.2}{Active suspension with suspension dynamic force as the reference input}{section.4}
-\BOOKMARK [2][-]{subsection.4.3}{Controlability, observability and stability}{section.4}
-\BOOKMARK [1][-]{section.5}{FEEDBACK LINEARIZATION}{}
-\BOOKMARK [1][-]{section.6}{CONTROLLER DESIGN}{}
-\BOOKMARK [2][-]{subsection.6.1}{PID Controller}{section.6}
-\BOOKMARK [1][-]{section.7}{RESULTS AND ANALYSIS}{}
-\BOOKMARK [1][-]{section.8}{CONCLUSION}{}
+\BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
+\BOOKMARK [1][-]{section.2}{BACKGROUND}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Passive suspension system}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Semi-active suspension system}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Active suspension system}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{MODELLING}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{System overview}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{State space model}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{Active suspension with suspension travel as the reference input}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{Active suspension with suspension dynamic force as the reference input}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.5}{Controlability, observability and stability}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{RESULTS AND ANALYSIS}{}% 12
+\BOOKMARK [1][-]{section.5}{CONCLUSION}{}% 13
