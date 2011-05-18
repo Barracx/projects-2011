@@ -18,6 +18,7 @@
 % All KJN's macros and goodies (some shameless borrowing from SPL)
 \usepackage{KJN}
 \usepackage{rotating}
+\usepackage{amsmath}
 
 %
 % PDF Info
@@ -48,9 +49,9 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\abstract{}
+\abstract{An anti-lock braking system is the most important safety system in the modern car. It allows the driver to bring the car to a halt in the shortest possible time whilst still maintaining control of the car. A IOFBL controller for a quarter car system is developed using state-space methods. A active suspension model is used to provide a reference input to the controller. The system is simulated and results presented.}
 
-\keywords{}
+\keywords{State-space, ABS, IOFBL, Active suspension, }
 
 
 \maketitle
@@ -61,471 +62,224 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 %
 \section{INTRODUCTION}
 
-The technology of vehicles, especially cars all over the world is continously evolving. Along with the many advances in the car manufacturing industry, the safety requirement for cars is of paramount importance. The techniques applied to various cars have already improved system stability and passenger safety with the use of several significant control systems, such as anti-lock braking systems (ABS), active suspension systems, traction control systems etc. 
+The technology of vehicles, especially cars all over the world is continuously evolving. Along with the many advances in the car manufacturing industry, the safety requirement for cars is of paramount importance. The techniques applied to various cars have already improved system stability and passenger safety with the use of several significant control systems, such as anti-lock braking systems (ABS), active suspension systems, traction control systems etc. 
 
 ABS is a system on motor vehicles which prevents the wheel from locking while braking. The purpose of this system is to allow the driver to maintain steering control under heavy breaking and in some situations to shorten braking distance and time. When brakes lock up on wet and slippery roads during a panic stop the driver might lose steering control and the vehicle can spin.
 
 There have been some integrated studies that combined the aforementioned subsystems in order to further enhance vehicle dynamic efficiency. For example, the concept of integrating ABS with active suspension has been introduced and investigated in the work of \cite{Alleyne:1997}. Many theories and design methods for ABS and active suspension systems have been proposed individually over the years. 
 
+The purpose of this paper is to compare the performance of an ABS controller using the output of the active suspension as an input. A closed loop feedback controller is synthesized from non-linear ABS equations using the input-output feedback linearization (IOFBL) method. The IOFBL is discussed in more detail in\cite{Nyandoro2:2011, Iraj:2008}.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{BACKGROUND}
 
-\subsection{ABS}
-
-It can provide directional stability and shortens the braking distance and time. Various researchers have considered a slip-ratio control of ABS in the use of sliding mode control schemes [3, 4]. A gain-scheduling scheme was proposed for the optimal target-slip tracking of an ABS, where the friction coefficient varied with respect to different vehicle forward speeds [5, 6]. 
-
-Active suspension systems must be able to guarantee the ride comfort of passengers. Hence, in the design of active suspensions, the improvement of ride quality is a major control objective to be emphasised. In the work of Lin and coworkers [8, 9], a novel nonlinear backstepping [14, 15] control design scheme was developed for both a quarter-car and a half-car active suspension system, which aimed to improve the tradeoff between the ride quality of passenger comfort and the utilisation of suspension travel. In addition, a road-adaptive nonlinear backstepping controller [10] has been applied to the design of a quarter-car active suspension for various road surfaces. The purpose of this paper is to take advantage of ABSs combined with active suspensions to further reduce vehicle braking time and stopping distance. During the braking process, if the vertical normal force is increased (this situation is equivalent to an increase of the weight of a car), the friction force between the car and road surface is increased to help the vehicle to stop in a shorter distance. As normal force cannot be increased naturally, active suspensions should therefore be the tool employed to achieve that adjustment of normal force. With the choice of an appropriate integrated algorithm, the vertical normal force can be adjusted with the braking torque in order to achieve a reduction of braking time and stopping distance.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Microscope stages}
-
-A microscope stage is required to move along all three axes.  The vertical
-motion of the stage provides a focusing mechanism and is usually performed by
-moving the stage mounting system vertically.  The specimen is then moved in
-the X-Y plane, about the optical centre of the microscope stage, exposing any
-point of the specimen to the viewer.  On the Olympus BX50, this motion is
-provided by two concentric rotary dials.
-
-\subsubsection*{Existing automated microscope stages:}
-
-The automation of microscope stages has been performed by various companies.
-Geared rotary stepper motors and piezo electric linear motors have been used
-to provide this linear X-Y motion.  Each is suited to a particular
-application.
-
-The rotary stepper motor solution is the most common solution.  They provide
-micrometer resolution with a relatively compact design and easy control and
-drive system.  Olympus \cite{Olympus}, Prior Scientific \cite{Prior} and Applied
-Scientific Instrumentation \cite{Ms4} have stages on the market that make use
-of this technology, for standard microscope applications.
-
-For nanotechnology, the piezo linear motors produced by PI \cite{PI} are
-incorporated into an automated stage.  The application of a voltage to the
-piezo-electric crystals causes them to bump the stage along with a resolution
-of 50 pm and a range of 1 mm.  This low range allows for capacitive sensors to
-provide accurate positional feedback.
-
-Additional options and features offered by these manufacturers include
-joystick control and RS-232 control.  The simplest of systems, suited to the
-Olympus BX50, range between R40 000 and R50 000 from a local
-supplier \cite{Elmulab} or from between R16 000 and \mbox{R35 000} excluding
-shipping charges from Prior Scientific, UK \cite{Prior}. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Digital camera systems}
-
-The Olympus BX-50 has adopted standard photomicrography camera lenses, namely
-C- and CS-mounted lenses \cite{Olympus}.  The capture rate of available
-digital capture devices range between 1/60 fps, from still cameras, to 30 fps,
-from video cameras using the National Television Standards Committee (NTSC)
-system \cite{Olympus}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Linear synchronous motors}
-
-LSM's have come into favour because of \cite{Halbach-1,XY-Thrust}:
-\begin{enumerate}
-	\item Their accurate positioning capabilities via DC excitation.
-	\item The lower cost and weight of permanent magnet (PM) movers which do not require power supplies
-	\item The high thrusts, speeds and efficiencies they can provide.
-	\item The absence of a transmission which eliminates gearing losses, and increases reliability and dynamic performance.
-\end{enumerate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{SYSTEM DESIGN}
-
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=0.45\textwidth]{../../Drawings/Flow-Diagram.pdf}
-	\caption{System Overview}
-	\label{fig:Sys}
-\end{figure}
-\figref{fig:Sys} depicts the three sections of the designed system.
-
-\subsection{dsPIC30F6014 microcontroller unit}
-The dsPIC30F6014 MCU \cite{Microchip} was used to control the motor.  In the
-case of sinusoidal power signals, it presented digital signals to two
-digital-to-analog converters (DAC).  For the application of PWM power signals,
-six output-compare channels were used.
+The technology of vehicles, especially cars all over the world is continuously evolving. Along with the many advances in the car manufacturing industry, the safety requirement for cars is of paramount importance. The techniques applied to various cars have already improved system stability and passenger safety with the use of several significant control systems, such as anti-lock braking systems (ABS), active suspension systems, traction control systems etc.
  
-\subsection{Drive system electronics}
+ABS is a system on motor vehicles which prevents the wheel from locking while braking. The purpose of this system is to allow the driver to maintain steering control under heavy breaking and in some situations to shorten braking distance and time. When brakes lock up on wet and slippery roads during a panic stop the driver might lose steering control and the vehicle can spin out of control.
 
-\subsubsection*{Sinusoidal Power Signals:}
-Two 12-bit DAC's produced the A and C phases for both directions.  A sequence
-of inverting summing amplifiers generated the third phase from the redundancy
-in three-phase systems, and provided bipolar operation.  Six Class-AB power
-amplifiers provided the current necessary to drive the X-Y LSM.
+There have been some integrated studies that combined the aforementioned subsystems in order to further enhance vehicle dynamic efficiency. For example, the concept of integrating ABS with active suspension has been introduced and investigated in the work of \cite{Crolla:1988}. Many theories and design methods for ABS and active suspension systems have been proposed individually over the years. 
 
-\subsubsection*{PWM Power Signals:}
-A six channel class-D amplifier provided the current necessary to drive the
-X-Y LSM through a filter bank. The filter bank was developed to compensate for
-the armature's low filtering ability.
-
-\subsection{X- and Y- direction windings}
-
-The armature windings were based on two flat, stacked, orthogonal LSM's as
-described by Davies \cite{Simon}, providing independent two-dimensional
-movement.
+The purpose of this paper is to take advantage of ABS combined with active suspensions to further reduce vehicle braking time and stopping distance. A closed loop feedback controller is synthesized from non-linear ABS equations using the input-output feedback linearization (IOFBL) method. The IOFBL is discussed in more detail in\cite{Nyandoro2:2011, Iraj:2008}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{STAGE DESIGN}
+\section{SYSTEM MODELING}
 
-\begin{figure}[hb!]
+The primary objective of designing an ABS controller is to improve the braking time of a car. The car has an initial longitudinal velocity, $v(t_0) = 120$ $km/h $. When the brakes of the car are applied the car has to come to a stop at a time $t_{f}$ i.e. $v(t_f) = 0$ $km/h$. The purpose of the ABS and active suspension modelling is to minimise $t_f$ whilst maintaining car steering and improving passenger comfort during breaking.
+
+\subsection{Mathematical model}
+
+The mathematical model of the ABS model along with the suspension system is developed. The active suspension system is not discussed in detail but results from previous studies of the suspension systems are used. 
+
+\begin{figure}[ht!]
 	\centering
-		\includegraphics[width=0.50\textwidth]{../../Drawings/Stage-Final.pdf}
-	\caption{Stage Design}
-	\label{fig:Stage}
+		\includegraphics[width=0.50\textwidth]{Quarter_car.png}
+	\caption{Quarter car forces and torques \cite{Shaomin:2010}}
+	\label{fig:system}
 \end{figure}
-%Placed Here so as to appear correctly
-\begin{table*}[ht!]
-	\centering
-	\caption{Armature Advantages and Disadvantages}
-		\begin{tabular}{lll}
-			\hline
-													&	{\msbf Advantages} 						& {\msbf Disadvantages}\\
-			\hline
-			{\msbf PCB}					& 1) The thin armature reduced leakage  			& 1) 24 series-turns/phase; costly to increase\\
-													& flux and eliminated LSM vertical separation.& 2) High Cost (R3 000)\\
-													& 2) The pole-pitch was exactly matched.\\													
-			\hline
-			{\msbf Wire-Wound}	& 1) Low Cost (R200)										& 1) Thicker armature increased leakage\\ 
-													& 2) 180 series-turns/phase			& flux and imposed vertical LSM separation.\\
-													& 3) Well matched pole-pitch  	& 2) Timely construction procedure.\\						\hline
-		\end{tabular}
-	\label{tab:Armatures}
-\end{table*}
-The stage in \figref{fig:Stage} was constructed from a machined wooden base.
-This material provided the lowest cost and weight when compared to metallic or
-plastic materials.  It hosted the sunken armature which was offset from the
-optical centre of the stage.  It was offset to allow the light to pass through
-the stage unobstructed, and sunken to allow the railing system to be fitted as
-low as possible.  This provided the closest possible suspension of the PM
-array, increasing flux linkage.  Excessive height also reduces the
-microscope's focusing range.  The railing system consisted of 5 mm diameter
-silver steel rails on which IKO LBE5 linear bearings were run.  The bearings
-were encased in machined Vesconite, which also served to hold the rails in
-place, aligned to within 0.01 mm at the ends.  A 3 mm thick piece of glass was
-fitted into the bottom of the central mover, providing a surface on which the
-specimen could be placed.  The cursor PM array was fitted onto the glass,
-directly below the central mover.  This prevented the vertical forces on the
-PM from generating torques on the central mover's linear bearings, allowing
-them to move smoothly. 
 
-\subsection{LSM design}
+The model consists of a single wheel of mass $m_u$ and radius $R$ attached to a mass, $m_s$. As the wheel rotates, in the direction of the velocity $v$ driven by the wheels moment of inertia $I$, a tyre reaction force $F_x$ is generated by the friction between the tyre surface $\mu$. The tyre reaction force will generate a torque that initiates a rolling motion of the wheel causing an angular velocity $\omega$. A brake torque $\tau_b$ applied to the wheel will act against the spinning of the wheel causing a negative angular acceleration.
 
-The layout specified by Davies \cite{Simon} was scaled for use in this
-application.  The LSM's orthogonal placement provided independent motion along
-two dimensions because of the associated orthogonal magnetic fields and
-theoretical zero mutual inductance.  The disadvantage of this layout was that
-the individual LSM's were at different depths from the cursor.  The result was
-that, at the level of the PM array, the lower LSM produced a weaker magnetic
-field than the upper LSM.
+Applying Newton's laws of motion on the quarter car braking model results taking into account that the velocity of the car changes much slower than the other variables involved:
 
-The armature was a slotless design.  Although the magnetic field was weaker in
-this design, the detent forces were eliminated \cite{Tubular,XY-Thrust}.
-Detent forces are the periodic attractive forces between the PM's and the
-metallic slots between the windings.  In order to achieve smooth motion, these
-forces must be eliminated.  
-
-The LSM was a single sided design, employed to minimise the height of the
-system.  The disadvantage of this design was that less flux was
-generated \cite{Linsync}.  A back iron was also neglected because of the
-associated weight which could not be accommodated by the stage support.  This
-reduced flux linkage.
-
-The topology employed consisted of an active armature and a passive PM
-cursor \cite{Linsync}.  The advantage of this topology was that the cursor was
-electrically isolated from the stage such that no electrical contacts were in
-motion.  This increased durability.
-
-To determine the pole-pitch, the speeds required must be considered.  From the
-Olympus BX50's technical data, the observable fields-of-view range between
-0.22 mm and 5.5 mm.  From this, and the rate of capture of the digital imaging
-devices, the linear speeds at which this system can move are between 0.176
-mm/s and 44 mm/s.  This includes a 20\% overlap which allows for accurate
-digital knitting.
-
-To achieve these low speeds, minimisation of both the pole-pitch and the input
-frequencies is essential.  The relationship between these three variables is
-given in \eqnref{eqn:Speed}.  The pole-pitch was limited by the dimensions of
-available Nd-Fe-B PM's.  The smallest available PM's were \mbox{8.6 $\times$
-8.6 mm $\times$ 3 mm}, polarised along their shortest dimension. To minimise
-force-ripple, the ratio of the magnet-length to the machine pole-pitch is
-0.8 \cite{Tubular}.  This ratio results in reduced harmonics in the DC magnetic
-field and lower thrust, but is essential for smooth motion. Therefore, the
-system pole-pitch was 10.75 mm and the excitation frequencies needed to be
-between 0.008 Hz and 2 Hz.
 \begin{equation}
-	v = v_s = 2f\tau
-	\label{eqn:Speed}
+	\begin{align}
+		m \dot{v} &= -F \mu (\tau)- C_x v^2 \\
+		I \dot{\omega} &= -B \omega + F_z \mu (\tau) R - \tau_b \\
+		\dot{\tau _b} &= - \frac{1}{\tau}(\tau _b + K_bv_b)
+	\end{align}
+	\label{eqn:forces}
 \end{equation}
-where:
 
-\begin{tabular}{lll}
-& $v$      & = Linear Velocity (mm/s)\\
-& $v_s$    & = Synchronous Linear Velocity (mm/s)\\
-& $f$      & = Input Frequency (Hz)\\
-& $\tau$   & = Pole Pitch (mm) \\
-\end{tabular}
+where $F_z$ is the total normal force acting on all wheels of the vehicle and $C_x$ is the vehicle aerodynamic friction coefficient. $B$ is the wheel bearing coefficient and $K_b$ is the braking gain. The coefficient of friction $\mu (\tau)$ is a non-linear function of the wheel slip ratio $\tau$. 
 
-Two armatures were tested.  The first design made use of a PCB.  The second
-was a wire-wound armature.  The advantages and disadvantages of both are
-presented in \tabref{tab:Armatures} with a final specification given in
-\tabref{tab:Specs}.  The two PM arrays shown in \figref{fig:PM} were also
-tested.  They represent compromises between size and flux linkage.
-%Placed Here so as to appear correctly
-\begin{table}[hb!]
+During braking, a slippage between the tyre and the contact of the road surface occurs. This slippage can be approximated by: 
+
+\begin{equation}
+	\tau = \frac{v - R \omega}{v}
+	\label{eqn:slip}
+\end{equation}
+
+Equation \ref{eqn:slip} describes the normalised difference between the vehicle speed, $v$ and the wheel perimeter $R\omega$. The coefficient of friction $\mu$ between the tyre and road surface depends on the tyre-road conditions and the value of wheel slip $\lambda$. This value can be worked out experimentally for different road surfaces. The results of which are approximated for dry asphalt, wet asphalt, and icy roads and depicted pictorially in \figref{fig:slip}. From \figref{fig:slip} and Equation \ref{eqn:slip} it is observed that $\lambda = 0$ represents the free rolling wheel condition where no friction force $F_x$ is exerted. While $\lambda = 1$ corresponds to a wheel that is locked ($\omega = 0$). 
+
+\begin{figure}[ht!]
 	\centering
-	\caption{Motor Specifications}
+		\includegraphics[width=0.50\textwidth]{slip.png}
+	\caption{Typical tyre longitudinal friction $\mu$ vs $\lambda$ curves for three types of roads. \cite{Tiem:2008}}
+	\label{fig:slip}
+\end{figure}
+
+From \figref{fig:slip} it can be seen that the value $\mu (\lambda)$ varies over a wide range of $\lambda$ values. The peak friction coefficient $\mu _0$ occurs at different values of $\lambda$ for the different roads. For higher slip values, the friction coefficient will decrease until the wheel is locked. The function $\mu (\lambda)$  can be approximated by the function:
+
+\begin{equation}
+	\mu (\lambda) = 2 \mu _0 \frac{\lambda _0 \lambda}{{\lambda _0} ^2 + \lambda ^ 2}
+	\label{eqn:friction}
+\end{equation}
+
+where $\mu _0$ is the maximum friction coefficient between the tyre and the road, $\lambda _0$ is the optimal slip ratio which can yield the peak friction value for a specified road. Since $\mu _0 = \mu(\lambda _0)$ then the goal of slip control is to maintain the braking slip value always close or equal to it's optimal value $\lambda _0$ \cite{Pedro:2009}. This reduces the braking distance and ensures the vehicle directional stability during braking.
+
+
+The normal force $F_z$ on the wheel of the car is the sum of the static and the dynamic weight of the vehicle. The dynamic weight is mainly determined by the longitudinal acceleration of $m_s$. The goal of incorporating the effects of an active suspension system with the ABS modelling and design is so that $F_z$ change in phase with the brake torque $\tau _b$ \cite{Alleyne:1997}. This relationship will ensure that $\mu (\lambda _0)$ occurs at when the brake torque is at it's peak thus resulting in the optimum road brake force. From the complete model, see \cite{Nyandoro1:2011}:
+
+\begin{equation}
+	\begin{align}
+		m  &= m_s + m_u \\
+		F_z &= mg - k_w x_s \\
+		F_z &= F_z \mu (\lambda)
+	\end{align}
+	\label{eqn:suspension}
+\end{equation}
+
+Where $k_w$ is the spring constant of the linearized tyre model. Equation \ref{eqn:suspension} shows that the tyre forces $F_z$ and $F_x$ are non-linear functions of the slip ratio $\mu (\lambda)$. This makes the the speed $v$ of the car to be different from the angular wheel speed $\omega$ as will be seen during simulations. Equation \ref{eqn:suspension} shows that the tyre forces are influenced by the static and dynamic force of the car and thus shows that the suspension system does influence the braking performance of the car \cite{Pable:2007}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{STATE-SPACE ANALYSIS}
+
+If a linear system can be represented by a set of linear differential equations, then state-space analysis can be used to aid the design of a controller to control the linear system. Since this system is non-linear, IOFBL is to be used for the representation of the system with the aim of synthesising a feedback controller for the system.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{State-space representation}
+
+The goal is to derive a linear multi-input multi-output (MIMO) state-space model for the quarter car set-up. Equations \ref{eqn:forces} - \ref{eqn:suspension}  are non-linear equations. They can be represented in a state-space model as a MIMO system \cite{Nyandoro2:2011}. The states are chosen as \textbf{x} = $[x_1$ $x_2$ $x_3$ $x_4$ $x_5$ $x_6]^T$,  $x_1 = v$, $x_2 = \omega$, $x_3 = x_s$, $x_4 = x_u$, $x_5 = \dot{x_s}$ and $x_6 = \dot{x_u}$.
+
+\begin{equation}
+	\begin{align}
+		\dot{x} &= f(x)+gu(t) \\
+		y &= h(x)=[\lambda \gamma]^T
+ 	\end{align}
+	\label{eqn:iofbl}
+\end{equation}
+
+where $\lambda$ is as in Equation \ref{eqn:slip} and $\gamma = x_4 - x_3$, i.e. the suspension travel from the model developed in the laboratory exercise.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Input-Output feedback linearisation}
+
+In a non-linear system such as the one presented by Equations \ref{eqn:iofbl}, it is difficult for the output $y(t)$ to track a predetermined  trajectory, $y_d(t)$ while keeping all the $n$ states bounded. This is due to the indirect relationship of the output, $v$, to the input force $\tau _b$ that forces it to $0$. Input-output feedback linearization aims to relate the output with the input via a state \cite{Nyandoro2:2011, Iraj:2008} thus allowing for use of pole placement to design a state variable feedback design. 
+
+This is achieved by differentiating the output equation until $y$ is directly related to the input u. This gives a new linear state equation:
+
+\begin{equation}
+  y^r = u_{new}
+  \label{eqn:unew}
+\end{equation}
+
+With $r$ being the relative degree i.e. the number of differentiations required to relate the input to the output. Equation \ref{unew} represents the stable linearised system. This relationship makes it easy to apply control-law to synthesise a tracking controller. Usually $r < n$ ($n$ = number of states) meaning that some state dynamics are hidden by the linearization process.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Feedback controller design}
+
+Feedback control is an error based strategy which regulates the difference between the desired and the achieved output to zero \cite{Sims:1999}. A feedback controller is to be designed using the state-space model. The advantage for the model based model controllers is that they are easy to migrate to different vehicles. 
+
+\begin{figure}[ht!]
+	\centering
+		\includegraphics[width=0.50\textwidth]{sliptrack.png}
+	\caption{Sample $\lambda$ and $mu$ for ABS with suspension tracking as the input \cite{Nyandoro2:2011}}
+	\label{fig:slipTrack}
+\end{figure}
+
+During normal driving, the slip ratio $\lambda = 0$. The primary qualitative objective of the slip controller is to bring a car travelling with an initial speed $v(t_0)$ to a halt \cite{Pedro:2009} in the shortest time and distance with the aid of the active suspension system. During braking, the active suspension ABS controller have to improve the ride comfort and keep the slip ratio around the optimal slip ratio $\lambda _0$. \figref{fig:slipTrack} shows a sample $\lambda$ and $\mu$ tracker which is the main goal of the IOFL regulator design. The input to this controller is the dynamic suspension force, $\rho = k_wx_1$ and the suspension travel $\gamma = x_3-x_1$, using the state-space representation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Pole placement for stable linearised system: }
+
+At this point the desired stable closed loop poles can be used to synthesise a state feedback gain matrix \textbf{K}. The poles of the closed loop linearised system are then chosen so that they are asymptotically stable \cite{Nyandoro2:2011}. Simulink is used to determine the poles of \\ \textbf{K} $= [k_{r-1}$ $k_{r-2}$ $...$ $k_0]$ that are stable. This also yields $u$ from Equation \ref{eqn:iofbl}. 
+
+The state feedback matrix is synthesised for a dynamic suspension force $\rho$ acting as the reference input and another one for the suspension travel $\gamma$ as the reference inputs. From this a tracking system for the states can be designed.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Pole placement for stable linearised tracking system: }
+
+The linearization process has an ultimate goal to allow for the tracking of the desired state. For this particular system the states that are to be tracked are the slip, velocity and linearised angular velocity from the quarter car model shown in \figref{fig:system}. These states are to be tracked for reference input as the suspension force, $\rho$, and the suspension travel, $\gamma$, using the state feedback matrices designed. 
+
+Synthesis of the tracking system is similar to the method used to attain the stabilised pole placement with error dynamics incorporated \cite{Nyandoro2:2011}. Comparing the characteristic equation of $u_{new}$ with the desired closed-loop pole locations the poles of the regulator can be calculated using MATLAB using the command \verb|place| ensuring that the error dynamics go to zero. This is achieved by using the Simulink model provided
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SIMULATIONS}
+
+
+%Placed Here so as to appear correctly
+\begin{table}[ht!]
+	\centering
+	\caption{Parameters of the quarter car model used for the simulation.}
 		\begin{tabular}{lll}
 			\hline
-           	 & {\msbf Specification} 	& {\msbf Value (Units)}\\
+          {\msbf Parameter} 	 & {\msbf Parameter} 	& {\msbf Parameter}\\
       \hline
-          1. & 3$\Phi$ Connection   & $\Delta$\\
-          2. & Pole Pairs							 & 6$\times$6\\
-          3. & Pole Pitch							 & 10.75$\times$10.75 (mm)\\
-          4. & PCB Track Width				 & 0.695 (mm)\\
-          5. & PCB Series-Turns/Phase  & 24$\times$24\\
-          6. & Wire-Wound wire $\oslash$   & 0.35 (mm)\\
-          7. & Wire-Wound 						 & 180$\times$180\\
-             & Series-Turns/Phase\\
-          8. & Max Current   					 & 1.5 (A)\\
-      		9. & Nd-Fe-B PM Size				 & 8.6$\times$8.6$\times$3 (mm)\\
+          B = 0.008 $kgm^2/s$		& $m_s$ = 425 kg   				& $B_sym$ = 200\\
+          $K_b$ = 0.8 					& $m_u$ = 40 kg						& $B_{snl}$ = 235..\\
+          $T_{max}$ = 10 kNm		& $k_s$ = 23500						& $B_{snl}$ = 400\\
+          $T_s$ = 0.45				  & $B_s$ = 700			 				& $J \approx 1.6$ $kdm^2$\\
+          $\mu_0$ = 0.8					& $\gamma _{max}$ = 5 mm	& $C_x$ = 0.856 kg/m\\
+          $K_w$ = 190 $kNm^{-1}$	&r = 0.35 m 						& g = 9.81 $ms_2$ \\
       \hline
 		\end{tabular}
-	\label{tab:Specs}
+	\label{tab:parameters}
 \end{table}
-\begin{figure}[htb!]
-	\centering
-		\includegraphics[width=0.48\textwidth]{../../Drawings/PM-Both.pdf}
-	\caption{PM Array Configurations}
-	\label{fig:PM}
-\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{DRIVER SYSTEM}
-\subsection{dsPIC30F6014 microcontroller}
-The dsPIC MCU was used to generate the six phase signals required to drive
-both dimensions of the X-Y LSM.  The program strategy was designed according
-to a layered system.  The signal generation formed the lowest level of the
-structure and accepted two inputs, the X- and Y-direction frequencies, called
-the frequency bus.  Subsequent layers existed separately from the generation
-layer.  To control the LSM, a layer asserted a value onto the frequency bus.
-This provided a means of stacking various layers such as a joystick or RS-232
-controller layer.  
+\section{RESULTS AND DISCUSSIONS}
 
-A 12-bit sampled sinusoid was stored in the program memory using the Page
-Space Visibility functionality which allowed program memory to be accessed as
-if it were data memory.  The generation layer accepted the two values on the
-frequency bus and set up timers to interrupt accordingly.  On each timer
-interrupt, the next value for each phase was read from the sinetable using
-pointers.  For sinusoidal power signals, these values were written to the
-12-bit dual DAC's using two 12-bit data buses and one 2-bit control bus.  For
-the PWM power signals, these values represented the duty-cycles of the PWM
-signals and were written into appropriate PWM registers.  The PWM signals ran
-at a chopper frequency of 1.8 kHz.  This allowed for 12-bit resolution at the
-available clock frequency.  Open-loop scalar control was implemented.  The
-methodology of the MCU is illustrated in \figref{fig:Controller}.
-\begin{figure}[hb]
+The combined ABS and active suspension system dynamics are simulated over a road which has an optimal value of $\mu$. The ABS model used fed with the $\rho$ and $\lambda$ as the reference inputs and the results are presented below. The parameters used in the model are tabulated in Table \ref{tab:parameters}. The simulations track the velocity, wheel angular velocity and displacements for less than 4 s. This is due to the fact that for small velocities, i.e $v < 4m/s$ the simulations break down as shown in \cite{Wright:1984}. 
+
+\begin{figure}
 	\centering
-		\includegraphics[width=0.45\textwidth]{../../Drawings/Controller.pdf}
-	\caption{Controller Methodology}
-	\label{fig:Controller}
+		\includegraphics[width=0.50\textwidth]{tracker.png}
+	\caption{Slip tracking}
+	\label{fig:contrSlip}
 \end{figure}
-\subsection{Drive system electronics}
 
-\subsubsection*{Sinusoidal power signals:}
-The two 12-bit digital buses were connected to two Maxim MX7847BN DAC's.
-Channel A of the two DAC's produced phases A and C for the X-direction whilst
-Channel B produced the same for the Y-Direction.  Bipolar operation was
-achieved using inverting, summing, operational amplifier configurations
-according to the application notes.  For each direction, phases A and C were
-summed in an inverting configuration to produce phase B according to
-\eqnref{eqn:3Phase}.  Tuning potentiometers were set to within 0.2\% fullscale
-(FS) to achieve phase and amplitude symmetry.  The six phase signals formed
-inputs to the six current gain amplifiers.  These were class-AB power
-amplifier configurations using TIP122 and TIP125 complimentary darlington
-transistor pairs.  They could be driven directly from the TL074 op-amps
-because of their high current gain ($H_{fe-min}=1000$).  This eliminated
-excessive external circuitry.  A TL074 op-amp was used to ensure accurate
-amplification by placing the class-AB amplifier in the feedback loop of the
-op-amp, with a buffered input to the op-amp.  The six outputs were connected
-directly to the X-Y LSM windings.  \begin{eqnarray}
-	i_A+i_B+i_C = 0\nonumber\\
-	i_B = -i_A-i_C\label{eqn:3Phase}
-\end{eqnarray}
-\subsubsection*{PWM power signals:}
-The six TTL logic level PWM signals formed inputs into a six channel class-D
-amplifier.  This consisted of a primary stage in which comparators, made from
-TL074 op-amps, pushed the voltage signals to the rails.  Thereafter, the same
-TIP122 and TIP125 complimentary darlington transistor pairs were used in an
-H-bridge configuration to provide current amplification.
-
-It is typically understood that the armature windings filter Voltage Source
-Inverter PWM signals to produce smoothed current signals.  In reality, the
--3 dB frequency of the filter created by the armature windings is given by
-$f=\frac{R}{2\pi L}$.  For the designed armatures, the resultant -3 dB
-frequencies were 3.183 kHz and 17.683 kHz for the wire-wound and PCB armatures
-respectively.  Therefore, the switching frequency permeated through the
-armatures as current signals with no attenuation.  A six channel filter bank
-was designed to compensate for this effect.  Each channel was a second order
-RLC filter, as shown in \figref{fig:Filter}.  The resulting -3 dB frequency was
-112 Hz.
-
-\begin{figure}[hb]
+\begin{figure}
 	\centering
-		\includegraphics[width=0.45\textwidth]{../../Drawings/Filter.pdf}
-	\caption{RLC Filter Circuit}
-	\label{fig:Filter}
+		\includegraphics[width=0.50\textwidth]{suspension_travel.png}
+	\caption{Suspension travel used as input}
+	\label{fig:suspTravel}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{RESULTS}
 
-Smooth motion was not achieved.  The contributing factors are considered below.
-
-\subsection{Torsional effects}
-
-Motion across the width of the stage was significantly more hap-hazard than
-that of the movement along the stage's length.  The layout and placement of
-the LSM resulted in the forces being applied at a distance from the linear
-bearings.  The distance at which this force was applied was different for each
-bearing, resulting in different torques on these bearings.  The resultant
-torsional effect, when combined with frictional variations on each bearing,
-would mis-align the bearings and cause them to cease.  The bearings were
-released from this state once the cursor had slipped a pole and was pushed
-backward for a short distance.  This effect was due to the offset positioning
-of the LSM.  Not only was this a hindrance to smooth motion, but it was also
-impractical in terms of it's spacial integration into a microscope system.
-
-\subsection{Frictional effects at low speeds}
-
-The linear bearings have extremely low frictional coefficients.  The static
-coefficient is, as is typical, higher than the kinetic coefficient.  As the
-magnetic wave built up behind the PM array, the force increased to overcome
-the static friction.  When the force had become substantial enough to overcome
-this friction, the cursor was thrust forward.  Because the frictional
-coefficient had reduced, the resultant force increased in the direction of
-movement.  The cursor moved suddenly, whilst the magnetic wave did not and
-thus did not reinforce the original force that was applied to the cursor.
-Therefore the cursor stopped and was once again affected by static friction.
-The cycle began again, resulting in periodic motion.
-
-\subsection{LSM construction}
-
-The layout of the LSM contributed in many ways to the failure to achieve
-smooth motion.  The wire-wound solution produced better results.
-
-\subsubsection*{PCB armature:} 
-The PCB design provided a solution whereby leakage flux was reduced, because
-of the reduced air-gap associated with a thinner armature relative to the
-pole-pitch.  The differing strengths of the X- and Y-direction windings at the
-PM level were eliminated because of the alternate layering of X- and
-Y-windings.  This design's major downfall was that, because of construction
-costs and complexities, only 24 series-turns per phase could be accommodated
-in the design.  In testing, the magnetic field produced could not overcome the
-inertia of the railing system.
-
-\subsubsection*{Wire-wound armature:}
-The wire-wound armature produced a strong magnetic field and was able to
-overcome the inertia of the railing system.  A 2.5 mm separation existed
-between the X- and Y-direction windings because of its construction.  The
-differing strengths of the magnetic fields were evident.  This design was able
-to accommodate 180 series-turns per phase resulting in a 650\% increase in
-efficiency over the PCB design.  The system still sourced 2 A from the power
-supply making it inefficient.  The high currents however may be attributed to
-the extra current needed to overcome the frictional and torsional effects.
-
-\subsubsection*{Cursor design:}
-The two-magnet design did not offer enough flux linkage to move the cursor
-successfully.  The eight-magnet design worked, but with the obvious spacial
-consequences.  Smooth motion may have been affected by the harmonics in the DC
-magnetic field.
-
-\subsection{Sinusoidal vs. PWM power signals}
-
-The natural PWM power signals performed more effectively than the sinusoidal
-power signals.
-
-\subsubsection*{Sinusoidal power signals:}
-These signals were highly susceptible to EMI and other sources of noise.  The
-amplification of these signals was inefficient because of the linear
-electronics involved.  The design was flawed by the inability to achieve phase
-and amplitude symmetry.  The finite resolution of 0.2\% FS in the tuning
-circuit resulted in an unbalanced three phase system.  When driving the X-Y
-LSM with this imbalance, high-frequency noise was observed and is analogous to
-two ocean waves crashing into one another.  
-
-\subsubsection*{PWM power signals:}
-The application of PWM power signals was efficient because the saturated
-transistors present little resistance in the current path and hence dissipate
-less energy, requiring smaller heatsinking components.  The electronic
-circuitry was significantly less complex and less susceptible to high
-frequency noise because of the digital nature of the signals.  The use of PWM
-at the suitably high enough chopper frequency of 1.8 kHz provided a better
-balanced sinusoidal system after the effective filtering of the filter bank.
-The chopper frequency was attenuated by 54 dB, in the current waveform, by the
-filter bank.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{DISCUSSION}
-
-Smooth motion was not achieved since the layout of the X-Y LSM caused
-torsional effects.  The low speeds required by the application caused
-staggered motion due to the dynamics of the frictional forces in the system.
-The efficiency was low due to the low 180 series-turns per phase resulting in
-2 A being drawn from the power supply.   PWM power signals proved more
-effective in maintaining phase and amplitude symmetry as opposed to sinusoidal
-power signals.  However, this method required external filter banks ($f_c=112$
-Hz to compensate for the ineffectual filtering ability of the armature.  The
-stacked layout of the X-Y LSM prevented more series-turns from being built
-into the system, whilst maintaining the low pole-pitch, because it separated
-the lower windings from the PM array accordingly.  The wire-wound armature was
-a better solution than the PCB design as it could accommodate more
-series-turns per phase at a lower cost.  Therefore, in this layout, the
-pole-pitch and ampere-turns necessary to provide smooth motion efficiently
-could not be accommodated.
-\begin{figure}[htb]
+\begin{figure}
 	\centering
-		\includegraphics[width=0.48\textwidth]{../../Drawings/Future-Stage.pdf}
-	\caption{Recommended Stage}
-	\label{fig:Recommend}
+		\includegraphics[width=0.50\textwidth]{rho_simulation.png}
+	\caption{Time response of breaking speeds and distance.}
+	\label{fig:speeds}
 \end{figure}
-\vspace{-8mm} % SiS! KJN, but needed to make it look neat
 
-An improved solution is depicted in \figref{fig:Recommend}, where four
-individual LSM's are used, two for each dimension.  They are placed below
-the linear bearings, under which the PM array is housed.  This prevents any
-torsional effects from mis-aligning the bearings because adjacent LSM's are
-excited from the same source.  Halbach arrays are recommended to increase flux
-linkage with the armature, making large PM arrays unnecessary.  They will also
-increase efficiency, accuracy and dynamic response resulting from their
-sinusoidal magnetic field pattern \cite{Halbach-1,XY-Thrust}.  This new layout
-also allows the stage to fit centrally about the optical centre, without an
-offset motor.  The railing system is maintained as it helps improve efficiency
-by reducing friction.  A suitable vector control strategy should be
-implemented to achieve the desired smooth motion.  By separating the X- and
-Y-direction windings, more ampere-turns can be accommodated by building in
-further depth into each LSM.  This is done while maintaining the small
-pole-pitch, if not reducing it simultaneously, depending on the availability
-of Nd-Fe-B magnets.
+The controllers performance is best tested during braking. A braking torque is applied to the ABS system with the the suspension travel and dynamic suspension forces being the inputs. When the simulations are performed it was found that the suspension dynamic force took less time to arrest the motion of the car than the suspension travel. 
+
+\figref{fig:contrSlip} shows that the controller is is able to track the slip quiete well. The rising time for the slip to reach its optimum point being the only time that the slip is being tracked incorrectly. The travelled distance, car velocity and wheel angular velocity are also plotted in \figref{fig:speeds}. This results show that the car comes to a stop when under the influence of the brake torque and the reference input, $\gamma$.
+
+Looking at the suspension travel, \figref{fig:suspTravel} it is observed that the ride comfort is improved. 
+
+Comparing these controller to the one synthesised in \cite{Shaomin:2010}, it is found that the performances are comparable. In \cite{Shaomin:2010} a sliding mode controller is used on a semi-active suspension with ABS. The comparable results could be also due to the fact that \cite{Shaomin:2010} also considered the road profile and the non-linear tyre in their control. Better performance is achieved by using a fuzzy logic and neural network controller as in \cite{Wang:2009} and \cite{Tiem:2008}. 
+
+Using the MATLAB functions, \verb|ctrb(A,B)| and \verb|obsv(A,C)| on the system model then finding their rank it is found that the system is controllable and observable. Controllability is a vital test on a system to determine if it is worth building a controller for it.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CONCLUSION}
 
-Slow and smooth motion necessary for the automation of specimen
-photomicrography could not be achieved due to torsional effects introduced
-when only two X-Y linear synchronous motors were used to automate an electric
-microscope stage. To resolve this problem, it is recommended that a layout
-using four independent linear synchronous motors be implemented.
+A IOFBL ABS controller is designed and simulated using state-space techniques. This controller was simulated using Simulink. The simulation includes checking how well the system keeps the value of the slip as close as possible to the optimum slip. It is found that using dynamic actuator forces as a reference input to the ABS system brings the car to a stop quicker.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{ACKNOWLEDGEMENT}
-
-The author would like to thank Mr. H. Fellows, Mr. A. van Zyl and Mr. S.Q.
-Davies from the School of Electrical and Information Engineering for their
-guidance, and Mrs. E. Marais from the Wits Medical School for providing access
-to the Olympus BX50.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\nocite{*}
 
 \bibliographystyle{witseie}

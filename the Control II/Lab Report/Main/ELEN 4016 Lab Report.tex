@@ -40,7 +40,7 @@
 \begin{document}
 
 
-\title{ACTIVE SUSPENSION MODELLING AND CONTROL}
+\title{ELEN4016 (LABORATORY): ACTIVE SUSPENSION MODELLING AND CONTROL}
 
 \author{Ntsako Manyike}
 
@@ -51,9 +51,9 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\abstract{To develop a robust controller that can improve the performances of the nonlinear active suspension system and its verifications using graphical and animation output. A stepwise approach with successive refinements of model and controller is undertaked. To develop a nonlinear mathematical model of the active suspension system for a quarter car model. To develop the control algorithm that based on a robust control scheme for the active suspension system.}
+\abstract{To develop a robust controller that can improve the performances of the nonlinear active suspension system and its verifications using graphical and animation output. A stepwise approach with successive refinements of model and controller is undertaken. To develop a nonlinear mathematical model of the active suspension system for a quarter car model. To develop the control algorithm that based on a robust control scheme for the active suspension system.}
 
-\keywords{Automated stage, LSM, microscope, X-Y linear motor}
+\keywords{Active actuator, Suspension travel, ABS, Feedback, State-space}
 
 
 \maketitle
@@ -159,80 +159,141 @@ state space form as:
 	\label{eqn:stateSpace}
 \end{array}
 
-where 
-
-\begin{bmatrix}
-		11 & 12 & 13 & 14 \\
-\end{bmatrix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{STATE SPACE REPRESENTATION}
-
-The linearity of this model permits the use of a statespace representation of the system. This results in 
-first-order explicit differential equations of the form 
- ܺ
-ሶ ൌ ܣܺ ൅ ܤܷ (1) 
- that are easily numerically integrated. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \subsection{Active suspension with suspension travel as the reference input}
+\begin{figure}[ht!]
+	\centering
+		\includegraphics[width=0.50\textwidth]{suspention_travel.png}
+	\caption{Quarter car active suspension response to suspension travel input}}
+	\label{fig:force}
+\end{figure}
+
+The code to produce this results is listed below:
+
+\begin{verbatim}
+% mass of quarter car excluding wheel
+ms = 427.0;    
+% mass of wheel 
+mw = 40.0;     
+%spring constant for suspension  
+Ks = 19960.0;  
+% damper constant for suspension 
+Cs = 1050.0;    
+% spring constant for wheel
+Kw = 175500.0;  
+
+%state matrices
+A = [0 1 0 0; 
+-Ks/ms -Cs/ms Ks/ms Cs/ms; 
+0 0 0 1; 
+Ks/mw Cs/mw -(Ks+Kw)/mw -Cs/mw];
+B = [0;
+    -1/ms; 
+    0; 
+    1/mw];
+C = [1 0 -1 0];
+D = 0;
+
+%check controllability
+rank(ctrb(A,B));
+%check observability
+rank(obsv(A,C));
+
+%It is required that the 
+%system should s
+%ettle in 0.5 seconds with an
+%overshoot of less than 5 %
+p1 = -35+15i;
+p2 = -35-15i;
+p3 = -9-7.75i;
+p4 = -9+7.75i;
+poles = [p1 p2 p3 p4];
+ %Find the feddback gain matrix
+Kgamma = place(A,B,poles)
+
+%check controllability
+Controllable = rank(ctrb(A,B));
+%check observability
+Observable = rank(obsv(A,C));
+
+t = 0:0.01:2;
+u = 0.01*ones(size(t));
+Nbar=rscale(A,B,C,0,Kgamma)
+lsim(A-B*Kgamma,B*Nbar,C,0,u,t)|
+\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \subsection{Active suspension with suspension dynamic force as the reference input}
 
+Using the Matlab function, place to calculate the closed loop pole position for a feedback regulator K, the \figref{fig:force} is realised.
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.50\textwidth]{Force_input.png}
+	\caption{Quarter car active suspension response to active force input}}
+	\label{fig:force}
+\end{figure}
+
+The code to plot the above graph is shown below:
+\begin{verbatim}
+	%Required parameters
+% mass of quarter car excluding wheel
+ms = 427.0;    
+% mass of wheel 
+mw = 40.0;     
+%spring constant for suspension  
+Ks = 19960.0;  
+% damper constant for suspension 
+Cs = 1050.0;    
+% spring constant for wheel
+Kw = 175500.0;  
+
+%state matrices
+A = [0 1 0 0; 
+-Ks/ms -Cs/ms Ks/ms Cs/ms; 
+0 0 0 1; 
+Ks/mw Cs/mw -(Ks+Kw)/mw -Cs/mw];
+B = [0;
+    -1/ms; 
+    0; 
+    1/mw];
+C = [0 0 1 0];
+D = 0;
+
+%check controllability
+rank(ctrb(A,B));
+%check observability
+rank(obsv(A,C));
+
+%It is required that the system 
+%should settle in 0.5 seconds with an
+%overshoot of less than 5 %
+p1 = -20+5i;
+p2 = -20-5i;
+p3 = -8-10i;
+p4 = -8+10i;
+poles = [p1 p2 p3 p4];
+%Find the feddback gain matrix
+Krho = place(A,B,poles)
+
+%check controllability
+Controllable = rank(ctrb(A,B));
+%check observability
+Observable = rank(obsv(A,C));
+
+t = 0:0.01:2;
+u = 0.01*ones(size(t));
+Nbar=rscale(A,B,C,0,Krho)
+lsim(A-B*Krho,B*Nbar,C,0,u,t)
+\end{verbatim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Controlability, observability and stability} 
 
 
-Controllability was observed by determining the rank 
-of the controllability matrix 
-ܣܤ  ܣܤ  ܤሾ
+Controllability was observed by determining the rank of the control matrix. See code for more information on this. Where B and A are the state space matrices and n is the number of states; 4 for  this model. It was observed that the system is controllable by using uncontrollable states in the system using the function  ctrb() in Matlab. 
 
-where B and A are the state space matrices as shown 
-in Appendix C and n is the number of states; 17 for 
-this model. It was observed that there are 9 
-uncontrollable states in the system using the function 
-ctrb() in Matlab. Bond graphs also offer a method to 
-identify these uncontrollable states by propagating 
-the effect of each input through the graph. By doing 
-so, it was discovered that all states of the system were 
-controllable by the four force actuator inputs. This 
-discrepancy between the Matlab result and the 
-intuitive result are discussed below. 
-
-Similarly, the Observability matrix 
-ܣܥ  ܣܥ  ܥሾ
-
-was analyzed in Matlab using the C and A state space 
-matrices (shown in Appendix C) and it was found 
-that 8 states were unobservable. Observability was 
-also examined intuitively through the system bond 
-graph. It was discovered that every state of the 
-system was observable via the Cg roll angle, pitch 
-angle, and vertical position. These three outputs 
-would be produced in a physical vehicle by the 
-integration of an accelerometer signal produced at the 
-vehicle’s CG. The discrepancy between the 
-observability predicted by the observavility matrix 
-rank, and the intuitive investigation of the model is 
-discussed below. 
-Stability of the system was checked by determining 
-the Eigen-values of the A matrix. All Eigen-values 
-had a real component less than or equal to zero, and 
-thus the system was deemed stable. Of the 17 Eigenvalues there were 3 with a value of zero. These zer
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{FEEDBACK LINEARIZATION}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{CONTROLLER DESIGN}
-Although 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{PID Controller}
-
+Similarly, the Observability matrix was analyzed in Matlab using the C and A state space matrices (shown in Appendix C) and it was found that 8 states were unobservable. It was discovered that every state of the system was observable via the Cg roll angle, pitch angle, and vertical position. These three outputs would be produced in a physical vehicle by the integration of an accelerometer signal produced at the vehicle
+Stability of the system was checked by determining the Eigen-values of the A matrix. All Eigen-values had a real component less than or equal to zero, and thus the system was deemed stable. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{RESULTS AND ANALYSIS}
@@ -240,7 +301,7 @@ Although
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CONCLUSION}
 
-
+A quarter car model is used to realise an active suspension model in a state-space representation. Newton's laws of motion are applied to the quarter car system and the resulting linear differential equation is transformed to a state-space representation. A step input representing suspension travel is applied to the model and the results are plotted. This is repeated for a dynamic suspension force. This shows that state-space is a useful technique to use as a stepping stone for designing feedback controllers and such since one can see each state of the system using software packages such as MATLAB.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

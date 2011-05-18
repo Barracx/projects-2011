@@ -1,46 +1,59 @@
-%Ball example
 
-ks = 23500;        %Spring constant
-Bs = 700;        %Damper constant
-ms = 490;        %Mass of 1/4 car
-mu = 40;         %Mass of wheel
-kw = 190000;        %Tire spring constant
-Tmax = 10000;    %Actuator force
-A = [0 1 0 0;
-    -ks/ms -Bs/ms ks/ms Bs/ms; 
-    0 0 0 1; 
-    ks/mu Bs/mu -(ks-kw)/mu -Bs/mu];
-B = [0; Tmax/ms; 0; -Tmax/mu];
-C = [0 1 -1 0];
-C2 = [0 0 1 0];
-D = 0;
+clc
+%parameters
+Mcar = 450;   %mass of the car body
+Mw = 40;  %mass of the suspension
+m = Mcar+Mw;%total mass of the car
+J=1.6; %moment of inertia for the wheel
+Cx= 0.856; %
+B=0.08;   %
+Bs=700;  %
+Ks=23500;%
+Tmax=10000; %
+tsettling=0.5;  %
+Kw=190000;  %
+Xumax=0.005;    %
+r=0.4;          %
+g=9.81;         %
+Normal=m*g;          %
 
-poles = eig(A);
+%initial conditions
+v0=120*1000/3600;
+w0=v0/r;
+mu0=0.8; 
+lambda0=0.2;%
 
-% t = 0:0.01:2;
-% u = 0*t;
-x0 = [0.005 0 0 0];
-stateSpace = ss(A, B, C, D);
+%state matrices
+A = [0 1 0 0; -Ks/Mcar -Bs/Mcar Ks/Mcar Bs/Mcar; 0 0 0 1; Ks/Mw Bs/Mw -(Ks+Kw)/Mw -Bs/Mw]
+B = [0 -1/Mcar 0 1/Mw]'
+C = [-1 0 1 0]
+D = 0
 
-tutorial_tf = tf(stateSpace)
+%check controllability
+rank(ctrb(A,B))
+%check observability
+rank(obsv(A,C))
 
-p1 = -20 + 20i;
-p2 = -20 - 20i;
-p3 = -100;
-p4 = -62;
-K = place(A,B,[p1 p2 p3 p4]);
-t = 0:0.01:2; 
-u1 = 0.010*ones(size(t))
-u2 = 10*ones(size(t));
+%put into state space
+T = ss(A,B,C,0);
+%step(T)
 
+[olz,olp,olg] = ss2zp(A,B,C,D) %open loop zeros and poles
+
+clp = [-20+5j, -20-5j, -8-10j, -8+10j]; %desired pole locations
+K = place(A,B,clp) %Find the feddback gain matrix
+
+t = 0:0.01:2;
+u = 0.01*ones(size(t));
 Nbar=rscale(A,B,C,0,K)
-Nbar2=rscale(A,B,C2,0,K)
+lsim(A-B*K,B*Nbar,C,0,u,t)
 
-lsim(A-B*K,B*Nbar,C,0, 'r', u1,t)
-% hold
-% lsim(A-B*K,B*Nbar2,C2,0, 'g--', u2, t)
+% u = Xumax*Kw*ones(size(t));
+% Nbar=rscale(A,B,C,0,K)
+% lsim(A-B*K,B*Nbar,C,0,u,t)
+% %N = 1/dcgain(A-B*K,B,C,D) %Find the feedforward gain
+% Ac1 = A-B*K; Bc1 =B; Cc1 = C; Dc1 = D; % closedloop system
+% 
+% %Tc = ss(Ac1,Bc1*N,Cc1,Dc1);
+% step(Ac1,Bc1,Cc1,Dc1)
 
-% u = 0.001*ones(size(t));
-% lsim(A-B*K,B,C,0,u,t)
-                                        
- 
