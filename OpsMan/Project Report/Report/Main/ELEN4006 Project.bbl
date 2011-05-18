@@ -1,0 +1,89 @@
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\url}[1]{{\tt #1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{Olympus}
+{\em Olympus Corporation\/}.
+\newblock \urlprefix\url{http://www.olympus.com}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{phppo}
+{Public Health Practice Program Office -- CDC}.
+\newblock \enquote{Diagnosis of Tuberculosis Infection and Disease.}
+\newblock
+  \urlprefix\url{http://www.phppo.cdc.gov/PHTN/tbmodules/modules1-5/m3/3-m-08.htm}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{biotec}
+{BIOTEC Laboratories Ltd}.
+\newblock \enquote{Biotec Products in Development.}
+\newblock \urlprefix\url{http://www.biotec.com/fastptb.html}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{STimes}
+N.~Soh.
+\newblock \enquote{Malaria Diagnosis in Just Minutes, Instead of Hours.}
+\newblock \urlprefix\url{http://www.ece.nus.edu.sg/events/news/newsarchs.htm}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{Prior}
+{\em Prior Scientific\/}.
+\newblock \urlprefix\url{http://www.prior.com}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{Ms4}
+{Applied Scientific Instrumentation}.
+\newblock \enquote{Multiscan-4 Low Cost Scanning Stage.}
+\newblock \urlprefix\url{http://www.asiimaging.com/ms-4.html}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{PI}
+{\em {Physik Instrumente (PI) GmbH \& Co.}\/}.
+\newblock \urlprefix\url{http://www.pi.ws}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{Elmulab}
+{\em Elmulab (Pty) Ltd\/}.
+\newblock \urlprefix\url{http://www.elmulab.co.za}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{Halbach-1}
+H.~Ohsaki, H.~Xueliang, Y.~Tsuboi, and Y.~Ootani.
+\newblock \enquote{Electromagnetic Characteristics of a coreless surface motor
+  using {H}albach permanent magnets.}
+\newblock In {\em 4th International Symposium on Linear Drives for Industry
+  Applications\/}, pp. 105--108. 2003.
+
+\bibitem{XY-Thrust}
+S.~Inui, M.~Naduka, and Y.~Ohira.
+\newblock \enquote{Experimental Investigation of Thrust of an X-Y LSM.}
+\newblock In {\em 3rd International Symposium on Linear Drives for Industry
+  Applications\/}, pp. 181--185. 2001.
+
+\bibitem{Microchip}
+{\em Microchip Technology Inc\/}.
+\newblock \urlprefix\url{http://www.microchip.com}.
+\newblock Last accessed: 1 July 2004.
+
+\bibitem{Simon}
+S.~Q. Davies.
+\newblock \enquote{Design, Construction and Control of a Slot-less X-Y Linear
+  Synchronous Motor.}
+\newblock 4$^{\rm th}$ Year Project Report 03P40, School of Electrical and
+  Information Engineering, University of the Witwatersrand, South Africa, 2003.
+
+\bibitem{Tubular}
+J.~Wang, G.~W. Jewell, and D.~Howe.
+\newblock \enquote{Analysis and Design Optimisation of Slotless Tubular
+  Permanent Magnet Linear Motors.}
+\newblock In {\em 3rd International Symposium on Linear Drives for Industry
+  Applications\/}, pp. 84--89. 2001.
+
+\bibitem{Linsync}
+J.~F. Gieras and Z.~J. Piech.
+\newblock {\em LINEAR SYNCHRONOUS MOTORS - Transportation and Automation
+  Systems\/}.
+\newblock CRC Press, 2000.
+
+\end{thebibliography}
