@@ -1,0 +1,18 @@
+Y. Fujii, "Possible application of mass levitation to
+force measurement", Metrologia, Vol.38, pp.83-
+84, 2001.
+
+Choi and Chang1 and Tracy and Chang2 developed a method for identifying foreign-object
+impact on composite plates using distributed built-in piezoelectric sensors
+
+Some examples for the use of piezoelectric
+sensors in industry are:
+• Measurement of mold cavity pressure
+for injection molding of plastics
+• Cylinder pressure monitoring on
+diesel and gas engines
+• Press force monitoring and control
+• Monitoring joining forces on automatic
+assembly machines
+• Monitoring of vibrating machinery
+• Process monitoring during machining
