@@ -22,7 +22,7 @@ den3=[1/(wn3)^2 (0.7*2)/wn3 1];
 G1=tf(num,den1);
 G2=tf(num,den2);
 G3=tf(num,den3); 
-step(G1,G2,G3);
+step(G1, 'r--',G2, 'b-.' ,G3, 'g');
 %bode(G1,G2,G3);
 %------------------------------------------------------
 %low pass filter bandwidth 100kHz
