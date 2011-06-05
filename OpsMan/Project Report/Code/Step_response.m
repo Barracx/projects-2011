@@ -23,10 +23,10 @@ T3 = tf(numt3, dent3)
 [y3, t3] = step(T3);
 
 clf
-grid on
-plot(t1, y1, t3, y3)
-title('Step responses for T1(s) and T2(s)')
-xlabel('Time(ms)')
-ylabel('Normalised response')
-pause
+%grid on
+%plot(t1, y1, 'g-', t3, y3)
+%title('Step responses for T1(s) and T2(s)')
+%xlabel('Time(ms)')
+%ylabel('Normalised response')
+%pause
 step(T1, T3)
